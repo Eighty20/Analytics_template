@@ -2,6 +2,8 @@
 
 The purpose of this repository is to be a template that analysts can pull to get a running start for each new project.
 
+![](https://statslab.eighty20.co.za/Organize-for-Success.jpg)
+
 It should help you with the following;
 
 - Get a decent folder layout  
