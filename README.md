@@ -16,46 +16,46 @@ It should help you with the following;
 
 ## Folder layout
 
-├── README.md          <- The top-level README for developers using this project.
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter and R notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── setup.py           <- Make this project pip installable with `pip install -e`
-├── src                <- Source code for use in this project.
-│   ├── __init__.py    <- Makes src a Python module
-│   │
-│   ├── data           <- Scripts to download or generate data
-│   │   ├── make_dataset.py
-│   │   └── make_dataset.R
-│   │
-│   ├── features       <- Scripts to turn raw data into features for modeling
-│   │   ├── build_features.py
-│   │   └── build_features.R
-│   │
-│   ├── models         <- Scripts to train models and then use trained models to make
-│   │   │                 predictions
-│   │   ├── predict_model.py
-│   │   └── train_model.py
-│   │
-│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-│   │   ├── visualize.py
-│   │   └── visualize.R
+├── README.md          <- The top-level README for developers using this project.  
+├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.  
+│                         generated with `pip freeze > requirements.txt`  
+├── data  
+│   ├── external       <- Data from third party sources.  
+│   ├── interim        <- Intermediate data that has been transformed.  
+│   ├── processed      <- The final, canonical data sets for modeling.  
+│   └── raw            <- The original, immutable data dump.  
+│  
+├── models             <- Trained and serialized models, model predictions, or model summaries  
+│  
+├── notebooks          <- Jupyter and R notebooks. Naming convention is a number (for ordering),  
+│                         the creator's initials, and a short `-` delimited description, e.g.  
+│                         `1.0-jqp-initial-data-exploration`.  
+│  
+├── references         <- Data dictionaries, manuals, and all other explanatory materials.  
+│  
+├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.  
+│   └── figures        <- Generated graphics and figures to be used in reporting  
+│  
+├── setup.py           <- Make this project pip installable with `pip install -e`  
+├── src                <- Source code for use in this project.  
+│   ├── __init__.py    <- Makes src a Python module  
+│   │  
+│   ├── data           <- Scripts to download or generate data  
+│   │   ├── make_dataset.py  
+│   │   └── make_dataset.R  
+│   │  
+│   ├── features       <- Scripts to turn raw data into features for modeling  
+│   │   ├── build_features.py  
+│   │   └── build_features.R  
+│   │  
+│   ├── models         <- Scripts to train models and then use trained models to make  
+│   │   │                 predictions  
+│   │   ├── predict_model.py  
+│   │   └── train_model.py  
+│   │  
+│   └── visualization  <- Scripts to create exploratory and results oriented visualizations  
+│   │   ├── visualize.py  
+│   │   └── visualize.R  
 
 ## R
 
@@ -82,15 +82,10 @@ After adding any new packages or dependencies make sure to store them with `pip 
 
 The different analysis scripts were created as a starting point.
 
-Because analytics can extend to nearly any use case I recommend starting from a base script and extendin its parts as you wish.
+Because analytics can extend to nearly any use case I recommend starting from a base script and extending its parts as you wish.
 
 For example you may start with
 - 04_modelling.rmd  
   - 04_01_Splitting_data_and_class_balance.rmd  
   
-## Example
-
-To illustrate how the workflow may be implemented I have setup a low weight example here;
-
-/example/  
 
