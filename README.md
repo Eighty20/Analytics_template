@@ -16,6 +16,7 @@ It should help you with the following;
 
 ## Folder layout
 
+<pre>
 ├── README.md          <- The top-level README for developers using this project.  
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.  
 │                         generated with `pip freeze > requirements.txt`  
@@ -56,7 +57,7 @@ It should help you with the following;
 │   └── visualization  <- Scripts to create exploratory and results oriented visualizations  
 │   │   ├── visualize.py  
 │   │   └── visualize.R  
-
+</pre>
 ## R
 
 This folder comes with a R project file.  
