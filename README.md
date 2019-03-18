@@ -89,4 +89,31 @@ For example you may start with
 - 04_modelling.rmd  
   - 04_01_Splitting_data_and_class_balance.rmd  
   
+## Philosophy
 
+### Track assumptions clearly
+
+It is of upmost importance to track assumptions!
+
+It is very easy to get side tracked while doing exploratory work. One must balance the reward of exploration with the time available to exploit viable angles of attack. This is why we need to keep track of the questions we are trying to answer and the story we are currently telling. Without stepping back frequently the project can get derailed.
+
+- Client outcomes
+- Desired output
+- SQL filters applied to the data
+- Assumptions made/implied by chosen models
+- Assumptions of engineered calculations and generated data columns
+- Save all intermediate results
+- Whenever you complete a key step of your solution save the objects to the objects folder on your local mapped drive
+
+### Keep all intermediate results tidy
+
+Always store and work with tidy inputs, even if it would be easier not to do so. For example if producing a MFA output dataframe or sampled dataframe make sure that the dataframe can be easily joined via a key and that the data is in a normalised form.
+
+Ignore this warning at your own peril; there is nothing worse than coming back to an object and realizing you no longer have the origin data and you can’t join using index or other method.
+
+### Your code should be loud and transparent
+
+Any assumptions made, operations made, checks done should be output somewhere. Every time your code produces a result that result needs to be displayed! If you have done a clustering, prove it, show it, display model parameters! This may not be important for the report but it should be shown in your code notebooks
+
+When possible; output should be propperly knit/saved
+This helps keep track of what you’ve done and lets others see your progress while enabling them to validate/peer review your work without having to understand every line of code.
