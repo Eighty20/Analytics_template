@@ -1,0 +1,44 @@
+---
+title: "00_get_data"
+output: html_notebook
+---
+
+For this example I will be pulling data from a kaggle competition using my kaggle API
+
+```{bash}
+ls -l
+```
+
+```{bash}
+pip install kaggle
+```
+
+```{bash}
+kaggle competitions download -c forest-cover-type-prediction
+```
+
+```{bash}
+unzip train.csv.zip 
+unzip test.csv.zip 
+```
+
+```{bash}
+mv sampleSubmission.csv.zip ../data/raw
+mv test.csv.zip ../data/raw
+mv train.csv.zip ../data/raw
+mv train.csv ../data/raw
+mv test.csv ../data/raw
+
+```
+
+```{bash}
+chmod 666 ../data/raw/train.csv
+chmod 666 ../data/raw/test.csv
+```
+
+
+```{bash}
+head -n 2 ../data/raw/*.csv
+```
+
+
