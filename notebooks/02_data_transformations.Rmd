@@ -1,0 +1,233 @@
+---
+title: "Transform data"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(recipes)
+```
+
+## Transformation introduction
+
+The transformation and cleaning we perform is very important. 
+
+It is good form to think about the transformation process as an estimator function or model. We should `train` it on the train data. It needs to have a learned `model` that we apply to raw data. After applying this model to the data the output should be ready for the model pipeline.
+
+If we build a transformer that does all of this it should be perfectly simple to run this script as a function/api or class to perform our transformation on the raw data and again on any new data we wish to compare or model.
+
+Some algorithms will perform better on data that is properly scaled.
+
+The transform methods we use may depend on the type of models we wish to fit. For example transforming the data for linear models may require us to use something like box cox transformations or dummifying nominal or ordinal features.
+
+For this example I will demostrate transformations for dealing with simple normalized data and one hot encoding
+
+### Deal with NA's
+
+I leave this here for reference.
+
+We did not have any NA's to deal with here, but if we had to deal with them we should update our assumptions and validations accordingly to keep track of row counts and changes during the data transformation pipeline.
+
+### Normalizing input array
+
+Normalizing the input array can help algorithms like neural networks train on the raw data.
+
+For this exercise we will simply apply the R recipes package to transform our data
+
+```{r}
+train <- readr::read_csv("../data/raw/train.csv")
+```
+
+```{r}
+rec_obj <- recipe(Cover_Type ~ ., data = train)
+
+data_pipeline <- 
+  rec_obj %>% 
+  step_center(all_predictors()) %>% 
+  step_scale(all_predictors()) 
+
+data_pipeline <- 
+  data_pipeline %>% 
+  prep(taining = train)
+  
+```
+
+We will store the recipe object so we can use this to transform our raw or new data
+
+```{r}
+data_pipeline %>% 
+  saveRDS("../models/data_recipe_pipeline.rds")
+```
+
+To check that everything is working properly we can test this data pipeline
+
+```{r}
+bake(data_pipeline,train)
+```
+
+### Another possible requirement may be one hot encoding the output
+
+When we deal with things this simple we can be tempted to just hack it.
+
+For example with some python
+
+```{python}
+import pandas as pd
+train_py = r.train
+
+train_py.Cover_Type
+```
+
+
+```{python}
+import pandas as pd
+train_py = r.train
+
+one_hot_outcome = []
+
+for i in range(len(train_py.Cover_Type)):
+  one_hot_outcome.append([1 if x == train_py.Cover_Type[i] else 0 for x in range(7)])
+  
+print(one_hot_outcome[0:10])
+```
+
+But be careful... We deliberately design our scripts to act like functions or API's
+
+We want to have something that can one hot encode the output for both the raw data and for data we have never seen before...
+
+We should consider for exaple how we will deal with labels or classes we have never seen before. In this case we can for example make sure that the function has a parameter where you specify the number of classes. As long as the classes are proper recorded integers the function will behave properly.
+
+We can manage this by for example keeping a translation table in our database and using it as an input parameter to properly index and then encode the data.
+
+This would also allow us to easily write a function to recode the columns yet again.
+
+For now we understand that the nth column corresponds to cover type n.
+
+## Function that scales and also one hot encodes
+
+Since we want to also stay modular a function doing these in R:
+
+```{r}
+get_one_hot_array <- function(int, n_class = 7){
+  library(assertthat)
+  
+  assert_that(class(int) == "numeric")
+  assert_that(class(n_class) == "numeric")
+  
+  vec = vector(length = n_class)
+  
+  for(i in 1:n_class){
+    x = as.numeric(int == i) 
+    vec[i] <- x
+  }
+  
+  return(vec)
+}
+
+```
+
+So here we define the pipeline as a functional chain
+
+```{r}
+one_hot_pipeline <- 
+  . %>%
+  pull(Cover_Type) %>%
+  map(get_one_hot_array) %>% 
+  reduce(rbind)
+```
+
+And test it
+
+```{r}
+one_hot_pipeline(train) %>% 
+  head
+```
+
+This isn't exactly clean and streamlined but it works to illustrate the idea.
+
+Easy improvements to the code can be made with for example rcpp. You can wrap the loops (and map as a loop) in a rcpp handler to turn them into easy to use c++ loops without needing any knowledge about c++
+
+```{r}
+scale_and_one_hot_encode <- function(data_path, recipe_path = "../models/data_recipe_pipeline.rds"){
+  
+  library(recipes)
+  df <- readr::read_csv(data_path)  
+  
+  recipe <- readRDS(recipe_path)
+  
+  scale_df <- bake(recipe,df)
+  
+  one_hot_mat <- one_hot_pipeline(df)
+  
+  final_array <- cbind(scale_df,one_hot_mat)
+  
+  return(final_array)
+}
+
+```
+
+So here we apply on the training data this new pipeline
+
+```{r}
+scale_and_one_hot_encode(data_path = "../data/raw/train.csv") %>% 
+  head 
+```
+
+You can adjust this to return a matrix and for example drop Id columns and the raw target variable.
+
+We can also choose to create this as an actual API or Script
+
+```{bash}
+cat > ../src/data_features/one_hot_data.r
+
+library(tidyverse)
+library(assertthat)
+
+args <- commandArgs(TRUE)
+data_path <- args[1]
+recipe_path <- args[2]
+n_class <- as.integer(args[3])
+
+get_one_hot_array <- function(int, n_class = 7){
+  library(assertthat)
+  
+  assert_that(class(int) == "numeric")
+  assert_that(class(n_class) == "numeric")
+  
+  vec = vector(length = n_class)
+  
+  for(i in 1:n_class){
+    x = as.numeric(int == i) 
+    vec[i] <- x
+  }
+  
+  return(vec)
+}
+
+one_hot_pipeline <- 
+  . %>%
+  pull(Cover_Type) %>%
+  map(get_one_hot_array) %>% 
+  reduce(rbind)
+
+  scale_and_one_hot_encode <- function(data_path, recipe_path = "../models/data_recipe_pipeline.rds"){
+  
+  library(recipes)
+  df <- readr::read_csv(data_path)  
+  
+  recipe <- readRDS(recipe_path)
+  
+  scale_df <- bake(recipe,df)
+  
+  one_hot_mat <- one_hot_pipeline(df)
+  
+  final_array <- cbind(scale_df,one_hot_mat)
+  
+  return(final_array)
+}
+
+# scale_and_one_hot_encode(data_path = "../../data/raw/train.csv", recipe_path = "../../models/data_recipe_pipeline.rds")  %>% 
+scale_and_one_hot_encode(data_path, recipe_path)  %>% 
+  print()
+
+```

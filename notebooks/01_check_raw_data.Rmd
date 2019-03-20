@@ -5,26 +5,72 @@ editor_options:
   chunk_output_type: inline
 ---
 
+## Load libraries
+
+```{r}
+library(tidyverse)
+library(DataExplorer)
+```
+
+
 ## Vaidate data
 
 We can check that the number of rows and the data itself has no obvious errors
 
 ```{bash}
 
-wc -l ../data/raw/*
+wc -l ../data/raw/*.csv
 
 ```
 
 
 ```{bash}
 
-head -n 2 ../data/raw/*
+head -n 2 ../data/raw/*.csv
 
 ```
 
 Now let's summarise some totals over the numeric features
 
 ```{r}
-train <- readr::read_csv("../data/raw/")
+train <- readr::read_csv("../data/raw/train.csv")
+test <- readr::read_csv("../data/raw/test.csv")
 ```
+
+### Dtypes
+
+```{r}
+train %>% glimpse
+```
+
+
+### Totals
+
+```{r}
+train %>% select_if(is.numeric) %>% map(sum,na.rm=T)
+```
+
+### NA's
+
+```{r}
+train %>% 
+  map(~.x %>% is.na %>% sum)
+```
+
+### Initial visualization of data
+
+```{r}
+train %>% 
+  plot_histogram
+
+ggsave("../reports/figures/histograms.png",width = 14,height = 14)
+```
+
+```{r}
+train %>% 
+  plot_correlation
+
+ggsave("../reports/figures/corrplot.png",width = 14,height = 14)
+```
+
 
