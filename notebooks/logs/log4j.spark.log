@@ -174,3 +174,31 @@
 19/03/20 09:48:28 INFO TaskSchedulerImpl: Removed TaskSet 30.0, whose tasks have all completed, from pool 
 19/03/20 09:48:28 INFO DAGScheduler: ResultStage 30 (collect at arrowconverters.scala:284) finished in 0.017 s
 19/03/20 09:48:28 INFO DAGScheduler: Job 24 finished: collect at arrowconverters.scala:284, took 0.019660 s
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 908
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 907
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 891
+19/03/20 09:49:30 INFO BlockManagerInfo: Removed broadcast_36_piece0 on localhost:38879 in memory (size: 4.9 KB, free: 6.1 GB)
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 887
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 904
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 889
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 906
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 905
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 902
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 903
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 911
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 901
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 890
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 898
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 909
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 896
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 912
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 894
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 910
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 897
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 888
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 886
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 892
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 895
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 900
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 899
+19/03/20 09:49:30 INFO ContextCleaner: Cleaned accumulator 893
