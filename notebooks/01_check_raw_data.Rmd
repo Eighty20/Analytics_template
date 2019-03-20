@@ -1,0 +1,30 @@
+---
+title: "Check raw data"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+## Vaidate data
+
+We can check that the number of rows and the data itself has no obvious errors
+
+```{bash}
+
+wc -l ../data/raw/*
+
+```
+
+
+```{bash}
+
+head -n 2 ../data/raw/*
+
+```
+
+Now let's summarise some totals over the numeric features
+
+```{r}
+train <- readr::read_csv("../data/raw/")
+```
+
