@@ -1,0 +1,111 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(sparklyr)
+library(rsparkling)
+library(h2o)
+library(arrow)
+
+config = spark_config()
+
+config$`sparklyr.shell.driver-memory` <- "8G"
+config$spark.memory.fraction <- 0.9
+
+options(rsparkling.sparklingwater.version = "2.4.1")
+
+sc <- spark_connect(master = "local",config = config)
+```
+
+```{r}
+train_tbl = spark_read_csv(sc, name = "cover_type_train", path = "../data/raw/train.csv")
+test_tbl = spark_read_csv(sc, name = "cover_type_test", path = "../data/raw/test.csv")
+```
+
+## Data pipeline
+
+```{r}
+data_pipeline <- 
+  . %>% 
+    mutate(Cover_Type = case_when(
+    Cover_Type == 1 ~ "cover_type_1",
+    Cover_Type == 2 ~ "cover_type_2",
+    Cover_Type == 3 ~ "cover_type_3",
+    Cover_Type == 4 ~ "cover_type_4",
+    Cover_Type == 5 ~ "cover_type_5",
+    Cover_Type == 6 ~ "cover_type_6",
+    Cover_Type == 7 ~ "cover_type_7"
+  )) %>% 
+  # mutate(Cover_Type = factor(Cover_Type)) %>% 
+  select(-Id)
+```
+
+We can test the pipeline on the training set
+
+```{r}
+data_pipeline(train_tbl)
+```
+
+It is important to note that the pipeline is executed on the spark connection in this case because the input to the function is a spark frame.
+
+If we call this function on the raw data however it will be executed using dplyr within R's memory.
+
+This is useful though because our pipeline can be used to train the data in the spark connection and also be reused when preparing new raw data to be predicted on using the final model
+
+## Train model
+
+```{r}
+train_h2o <- 
+  train_tbl %>% 
+  data_pipeline %>% 
+  as_h2o_frame(sc = sc)
+
+train_h2o["Cover_Type"] = as.factor(train_h2o["Cover_Type"])
+```
+
+```{r}
+gbm_model <- 
+  h2o.gbm(
+    x = setdiff(names(train_h2o),"Cover_Type"),
+    y = "Cover_Type",
+    training_frame = train_h2o
+  )
+```
+
+```{r}
+gbm_model
+```
+
+```{r}
+dl_model <- 
+  h2o.deeplearning(
+    x = setdiff(names(train_h2o),"Cover_Type"),
+    y = "Cover_Type",
+    training_frame = train_h2o
+  )
+```
+
+```{r}
+dl_model
+```
+
+We need to store the best model in a way we can deploy it without needed all the depencies required to actually train the model. We can do this by storing it as either a POJO or a MOJO object. See;  
+
+<http://docs.h2o.ai/h2o/latest-stable/h2o-docs/productionizing.html>  
+
+The POJO option stores it as a JAVA file. The MOJO option stores a zip file but this option is more optimized and modern.
+
+```{r}
+h2o.download_pojo(model = gbm_model,path = "../models/")
+h2o.download_mojo(model = gbm_model,path = "../models/")
+```
+
+
+## Model pipeline
+
+Now that we have our POJO and MOJO objects we can create a simple application that uses them to make predictions
+
+

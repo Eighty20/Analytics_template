@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Mar 18 23:45:08 SAST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0169-92c3-f12c-0000905b9d80 
+on database directory memory:/home/stefan/Analytics_template/databaseName=metastore_db with class loader sun.misc.Launcher$AppClassLoader@5e8c92f4 
+Loaded from file:/home/stefan/spark/spark-2.4.0-bin-hadoop2.7/jars/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_201-b09
+user.dir=/home/stefan/Analytics_template
+os.name=Linux
+os.arch=amd64
+os.version=4.14.83+
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

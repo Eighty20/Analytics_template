@@ -1,0 +1,378 @@
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 605
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 564
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 579
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned shuffle 3
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 468
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 524
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 573
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 455
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 505
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 442
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 581
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 471
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 525
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 485
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 604
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 580
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 486
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 447
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 608
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 527
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 428
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 540
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 529
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 598
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 434
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 502
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 612
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 433
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 523
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 607
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 456
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 452
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 443
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 503
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 543
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 462
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 532
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 481
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 550
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 602
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 504
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 600
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 449
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 603
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 465
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 563
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 489
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 501
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 546
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 591
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 499
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 464
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 561
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 429
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 493
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 436
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 474
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 424
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 583
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 609
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 534
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 526
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 606
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 515
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 430
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 541
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 520
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 596
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 506
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 461
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 522
+19/03/19 00:15:04 INFO BlockManagerInfo: Removed broadcast_24_piece0 on localhost:34077 in memory (size: 4.9 KB, free: 6.1 GB)
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 565
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 494
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 538
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 569
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 575
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 508
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 483
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 611
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 477
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 562
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 528
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 500
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 446
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 472
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 495
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 584
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 544
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 588
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 496
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 492
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 511
+19/03/19 00:15:04 INFO BlockManagerInfo: Removed broadcast_20_piece0 on localhost:34077 in memory (size: 23.8 KB, free: 6.1 GB)
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 536
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 577
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 488
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 537
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 594
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 435
+19/03/19 00:15:04 INFO BlockManagerInfo: Removed broadcast_22_piece0 on localhost:34077 in memory (size: 23.7 KB, free: 6.1 GB)
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 533
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 560
+19/03/19 00:15:04 INFO BlockManagerInfo: Removed broadcast_25_piece0 on localhost:34077 in memory (size: 4.9 KB, free: 6.1 GB)
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 460
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 470
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 487
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 554
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 582
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 467
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 568
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 589
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 497
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 567
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 507
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 517
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 427
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 431
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 519
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 549
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 498
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 479
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 518
+19/03/19 00:15:04 INFO BlockManagerInfo: Removed broadcast_23_piece0 on localhost:34077 in memory (size: 25.3 KB, free: 6.1 GB)
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 586
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 599
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 482
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 587
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 593
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 426
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 478
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 571
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 521
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 548
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 553
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 601
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 530
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 592
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 450
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 585
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 570
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 458
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 480
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 473
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 547
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 556
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 578
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 597
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 595
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 574
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 576
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 559
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 463
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 457
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 558
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 572
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 466
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 491
+19/03/19 00:15:04 INFO BlockManagerInfo: Removed broadcast_21_piece0 on localhost:34077 in memory (size: 3.8 KB, free: 6.1 GB)
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 545
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 590
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 425
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 551
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 422
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 552
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 542
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 566
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 557
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 445
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 510
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned shuffle 2
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 509
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 516
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 454
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 459
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 512
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 476
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 432
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 490
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 448
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 469
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 535
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 423
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 475
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 484
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 539
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 513
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 444
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 514
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 610
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 451
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 453
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 531
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 555
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 25
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 371
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 8
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 18
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 392
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 391
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 7
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 384
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 13
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 21
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 0
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 12
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 370
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 368
+19/03/19 00:15:04 INFO BlockManagerInfo: Removed broadcast_17_piece0 on localhost:34077 in memory (size: 7.4 KB, free: 6.1 GB)
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 373
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 11
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 380
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 389
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 364
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 385
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 372
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 1
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 390
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 383
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 379
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 376
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 19
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 378
+19/03/19 00:15:04 INFO BlockManagerInfo: Removed broadcast_16_piece0 on localhost:34077 in memory (size: 24.6 KB, free: 6.1 GB)
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 388
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 17
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 386
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 24
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 16
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 6
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 9
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 2
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 365
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 363
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 377
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 15
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 387
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 374
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 367
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 14
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 26
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 23
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 3
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 10
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 381
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 5
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 22
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 369
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 4
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 375
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 20
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 366
+19/03/19 00:15:04 INFO ContextCleaner: Cleaned accumulator 382
+19/03/19 11:06:51 INFO HiveMetaStore: 0: get_database: default
+19/03/19 11:06:51 INFO audit: ugi=stefan	ip=unknown-ip-addr	cmd=get_database: default	
+19/03/19 11:06:51 INFO HiveMetaStore: 0: get_database: default
+19/03/19 11:06:51 INFO audit: ugi=stefan	ip=unknown-ip-addr	cmd=get_database: default	
+19/03/19 11:06:51 INFO HiveMetaStore: 0: get_tables: db=default pat=*
+19/03/19 11:06:51 INFO audit: ugi=stefan	ip=unknown-ip-addr	cmd=get_tables: db=default pat=*	
+19/03/19 11:06:51 INFO SparkContext: Starting job: collect at arrowconverters.scala:284
+19/03/19 11:06:51 INFO DAGScheduler: Got job 16 (collect at arrowconverters.scala:284) with 2 output partitions
+19/03/19 11:06:51 INFO DAGScheduler: Final stage: ResultStage 20 (collect at arrowconverters.scala:284)
+19/03/19 11:06:51 INFO DAGScheduler: Parents of final stage: List()
+19/03/19 11:06:51 INFO DAGScheduler: Missing parents: List()
+19/03/19 11:06:51 INFO DAGScheduler: Submitting ResultStage 20 (MapPartitionsRDD[108] at collect at arrowconverters.scala:284), which has no missing parents
+19/03/19 11:06:51 INFO MemoryStore: Block broadcast_26 stored as values in memory (estimated size 9.5 KB, free 6.1 GB)
+19/03/19 11:06:51 INFO MemoryStore: Block broadcast_26_piece0 stored as bytes in memory (estimated size 4.9 KB, free 6.1 GB)
+19/03/19 11:06:51 INFO BlockManagerInfo: Added broadcast_26_piece0 in memory on localhost:34077 (size: 4.9 KB, free: 6.1 GB)
+19/03/19 11:06:51 INFO SparkContext: Created broadcast 26 from broadcast at DAGScheduler.scala:1161
+19/03/19 11:06:51 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 20 (MapPartitionsRDD[108] at collect at arrowconverters.scala:284) (first 15 tasks are for partitions Vector(0, 1))
+19/03/19 11:06:51 INFO TaskSchedulerImpl: Adding task set 20.0 with 2 tasks
+19/03/19 11:06:51 INFO TaskSetManager: Starting task 0.0 in stage 20.0 (TID 76, localhost, executor driver, partition 0, PROCESS_LOCAL, 8076 bytes)
+19/03/19 11:06:51 INFO TaskSetManager: Starting task 1.0 in stage 20.0 (TID 77, localhost, executor driver, partition 1, PROCESS_LOCAL, 8076 bytes)
+19/03/19 11:06:51 INFO Executor: Running task 0.0 in stage 20.0 (TID 76)
+19/03/19 11:06:51 INFO Executor: Running task 1.0 in stage 20.0 (TID 77)
+19/03/19 11:06:51 INFO Executor: Finished task 0.0 in stage 20.0 (TID 76). 1463 bytes result sent to driver
+19/03/19 11:06:51 INFO Executor: Finished task 1.0 in stage 20.0 (TID 77). 1506 bytes result sent to driver
+19/03/19 11:06:51 INFO TaskSetManager: Finished task 0.0 in stage 20.0 (TID 76) in 32 ms on localhost (executor driver) (1/2)
+19/03/19 11:06:51 INFO TaskSetManager: Finished task 1.0 in stage 20.0 (TID 77) in 24 ms on localhost (executor driver) (2/2)
+19/03/19 11:06:51 INFO TaskSchedulerImpl: Removed TaskSet 20.0, whose tasks have all completed, from pool 
+19/03/19 11:06:51 INFO DAGScheduler: ResultStage 20 (collect at arrowconverters.scala:284) finished in 0.050 s
+19/03/19 11:06:51 INFO DAGScheduler: Job 16 finished: collect at arrowconverters.scala:284, took 0.054940 s
+19/03/19 11:06:51 INFO HiveMetaStore: 0: get_database: default
+19/03/19 11:06:51 INFO audit: ugi=stefan	ip=unknown-ip-addr	cmd=get_database: default	
+19/03/19 11:06:51 INFO HiveMetaStore: 0: get_database: default
+19/03/19 11:06:51 INFO audit: ugi=stefan	ip=unknown-ip-addr	cmd=get_database: default	
+19/03/19 11:06:51 INFO HiveMetaStore: 0: get_tables: db=default pat=*
+19/03/19 11:06:51 INFO audit: ugi=stefan	ip=unknown-ip-addr	cmd=get_tables: db=default pat=*	
+19/03/19 11:06:51 INFO SparkContext: Starting job: collect at arrowconverters.scala:284
+19/03/19 11:06:51 INFO DAGScheduler: Got job 17 (collect at arrowconverters.scala:284) with 2 output partitions
+19/03/19 11:06:51 INFO DAGScheduler: Final stage: ResultStage 21 (collect at arrowconverters.scala:284)
+19/03/19 11:06:51 INFO DAGScheduler: Parents of final stage: List()
+19/03/19 11:06:51 INFO DAGScheduler: Missing parents: List()
+19/03/19 11:06:51 INFO DAGScheduler: Submitting ResultStage 21 (MapPartitionsRDD[114] at collect at arrowconverters.scala:284), which has no missing parents
+19/03/19 11:06:51 INFO MemoryStore: Block broadcast_27 stored as values in memory (estimated size 9.5 KB, free 6.1 GB)
+19/03/19 11:06:51 INFO MemoryStore: Block broadcast_27_piece0 stored as bytes in memory (estimated size 4.9 KB, free 6.1 GB)
+19/03/19 11:06:51 INFO BlockManagerInfo: Added broadcast_27_piece0 in memory on localhost:34077 (size: 4.9 KB, free: 6.1 GB)
+19/03/19 11:06:51 INFO SparkContext: Created broadcast 27 from broadcast at DAGScheduler.scala:1161
+19/03/19 11:06:51 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 21 (MapPartitionsRDD[114] at collect at arrowconverters.scala:284) (first 15 tasks are for partitions Vector(0, 1))
+19/03/19 11:06:51 INFO TaskSchedulerImpl: Adding task set 21.0 with 2 tasks
+19/03/19 11:06:51 INFO TaskSetManager: Starting task 0.0 in stage 21.0 (TID 78, localhost, executor driver, partition 0, PROCESS_LOCAL, 8076 bytes)
+19/03/19 11:06:51 INFO TaskSetManager: Starting task 1.0 in stage 21.0 (TID 79, localhost, executor driver, partition 1, PROCESS_LOCAL, 8076 bytes)
+19/03/19 11:06:51 INFO Executor: Running task 1.0 in stage 21.0 (TID 79)
+19/03/19 11:06:51 INFO Executor: Running task 0.0 in stage 21.0 (TID 78)
+19/03/19 11:06:51 INFO Executor: Finished task 0.0 in stage 21.0 (TID 78). 1506 bytes result sent to driver
+19/03/19 11:06:51 INFO TaskSetManager: Finished task 0.0 in stage 21.0 (TID 78) in 12 ms on localhost (executor driver) (1/2)
+19/03/19 11:06:51 INFO Executor: Finished task 1.0 in stage 21.0 (TID 79). 1463 bytes result sent to driver
+19/03/19 11:06:51 INFO TaskSetManager: Finished task 1.0 in stage 21.0 (TID 79) in 15 ms on localhost (executor driver) (2/2)
+19/03/19 11:06:51 INFO TaskSchedulerImpl: Removed TaskSet 21.0, whose tasks have all completed, from pool 
+19/03/19 11:06:51 INFO DAGScheduler: ResultStage 21 (collect at arrowconverters.scala:284) finished in 0.022 s
+19/03/19 11:06:51 INFO DAGScheduler: Job 17 finished: collect at arrowconverters.scala:284, took 0.025543 s
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 631
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 639
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 641
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 632
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 623
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 622
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 662
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 634
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 661
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 613
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 654
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 626
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 660
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 655
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 653
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 659
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 620
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 666
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 625
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 637
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 645
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 630
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 649
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 640
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 648
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 636
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 638
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 614
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 663
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 635
+19/03/19 11:15:04 INFO BlockManagerInfo: Removed broadcast_26_piece0 on localhost:34077 in memory (size: 4.9 KB, free: 6.1 GB)
+19/03/19 11:15:04 INFO BlockManagerInfo: Removed broadcast_27_piece0 on localhost:34077 in memory (size: 4.9 KB, free: 6.1 GB)
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 629
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 643
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 656
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 624
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 633
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 644
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 618
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 664
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 621
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 615
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 650
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 642
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 647
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 627
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 665
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 628
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 658
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 651
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 619
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 616
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 617
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 657
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 652
+19/03/19 11:15:04 INFO ContextCleaner: Cleaned accumulator 646
+19/03/19 11:32:11 INFO SparkContext: Invoking stop() from shutdown hook
+19/03/19 11:32:11 INFO SparkUI: Stopped Spark web UI at http://localhost:4040
+19/03/19 11:32:11 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+19/03/19 11:32:11 INFO MemoryStore: MemoryStore cleared
+19/03/19 11:32:11 INFO BlockManager: BlockManager stopped
+19/03/19 11:32:11 INFO BlockManagerMaster: BlockManagerMaster stopped
+19/03/19 11:32:11 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+19/03/19 11:32:11 INFO SparkContext: Successfully stopped SparkContext
+19/03/19 11:32:11 INFO ShutdownHookManager: Shutdown hook called
+19/03/19 11:32:11 INFO ShutdownHookManager: Deleting directory /tmp/spark-cad9d676-85ce-4d7e-9cb6-eae691c1ad72
+19/03/19 11:32:12 INFO ShutdownHookManager: Deleting directory /tmp/spark-e662fc0d-165a-4f73-8bb4-ece2ed864437
