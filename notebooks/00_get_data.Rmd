@@ -1,6 +1,8 @@
 ---
 title: "00_get_data"
 output: html_notebook
+editor_options: 
+  chunk_output_type: inline
 ---
 
 For this example I will be pulling data from a kaggle competition using my kaggle API
