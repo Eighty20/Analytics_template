@@ -178,7 +178,7 @@ You can adjust this to return a matrix and for example drop Id columns and the r
 We can also choose to create this as an actual API or Script
 
 ```{bash}
-cat > ../src/data_features/one_hot_data.r
+cat > ../src/data_features/one_hot_data.r <<EOF
 
 library(tidyverse)
 library(assertthat)
@@ -186,7 +186,8 @@ library(assertthat)
 args <- commandArgs(TRUE)
 data_path <- args[1]
 recipe_path <- args[2]
-n_class <- as.integer(args[3])
+n_class <- as.numeric(args[3])
+out_path <-args[4]
 
 get_one_hot_array <- function(int, n_class = 7){
   library(assertthat)
@@ -207,7 +208,7 @@ get_one_hot_array <- function(int, n_class = 7){
 one_hot_pipeline <- 
   . %>%
   pull(Cover_Type) %>%
-  map(get_one_hot_array) %>% 
+  map(get_one_hot_array,n_class = n_class) %>% 
   reduce(rbind)
 
   scale_and_one_hot_encode <- function(data_path, recipe_path = "../models/data_recipe_pipeline.rds"){
@@ -228,6 +229,19 @@ one_hot_pipeline <-
 
 # scale_and_one_hot_encode(data_path = "../../data/raw/train.csv", recipe_path = "../../models/data_recipe_pipeline.rds")  %>% 
 scale_and_one_hot_encode(data_path, recipe_path)  %>% 
-  print()
+ write_csv(path = out_path)
 
+EOF
 ```
+
+So let's look at what this script does
+
+```{bash}
+Rscript ../src/data_features/one_hot_data.r ../data/raw/train.csv ../models/data_recipe_pipeline.rds 7 ../data/interim/test.csv
+```
+
+```{bash}
+head -n 2 ../data/interim/test.csv
+```
+
+So we can see that we have a working data pipeline that can be run from shell with arguments.
