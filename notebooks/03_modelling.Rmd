@@ -3,5 +3,17 @@ title: "Modelling"
 output: html_notebook
 ---
 
+## Goal of modelling
 
-##
+The purpose of the modelling exercise is to map some input or data to a desired objective.
+
+In light ofthis we may build many different types of models, for example;
+
+- Supervised models  
+- Unsupervised models  
+- Generative models  
+- Probabilistic models  
+
+To name a few. In this example we are trying to predict cover type given a set of actual observations so I will illustrate an example supervised learning approach.
+
+

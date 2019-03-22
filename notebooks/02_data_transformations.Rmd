@@ -103,7 +103,7 @@ This would also allow us to easily write a function to recode the columns yet ag
 
 For now we understand that the nth column corresponds to cover type n.
 
-## Function that scales and also one hot encodes
+## Functions that scales and also one hot encodes
 
 Since we want to also stay modular a function doing these in R:
 
@@ -175,6 +175,8 @@ scale_and_one_hot_encode(data_path = "../data/raw/train.csv") %>%
 
 You can adjust this to return a matrix and for example drop Id columns and the raw target variable.
 
+## API based coding
+
 We can also choose to create this as an actual API or Script
 
 ```{bash}
@@ -245,3 +247,57 @@ head -n 2 ../data/interim/test.csv
 ```
 
 So we can see that we have a working data pipeline that can be run from shell with arguments.
+
+## Storing modular functions
+
+To keep the pipeline neat we will store the function of cleaning the data in our src folder
+
+```{bash}
+cat > ../src/data_features/data_pipeline.r <<EOF
+
+data_pipeline <- function (x, ...) {
+ UseMethod("data_pipeline", x)
+}
+ 
+data_pipeline.tbl_spark <- function(df){
+  df %>% 
+    collect() %>% 
+    bake(read_rds("/home/stefan/non_packrat/Analytics_template/models/data_recipe_pipeline.rds"),new_data = .) %>% 
+    mutate(Cover_Type = case_when(
+    Cover_Type == 1 ~ "cover_type_1",
+    Cover_Type == 2 ~ "cover_type_2",
+    Cover_Type == 3 ~ "cover_type_3",
+    Cover_Type == 4 ~ "cover_type_4",
+    Cover_Type == 5 ~ "cover_type_5",
+    Cover_Type == 6 ~ "cover_type_6",
+    Cover_Type == 7 ~ "cover_type_7"
+  )) %>% 
+  # mutate(Cover_Type = factor(Cover_Type)) %>% 
+  select(-Id) %>% 
+  sparklyr::copy_to(dest = sc,df = .,name = "train_tbl", overwrite = T)
+
+}
+ 
+ data_pipeline.data.frame <- function(df){
+  df %>% 
+    bake(read_rds("/home/stefan/non_packrat/Analytics_template/models/data_recipe_pipeline.rds"),new_data = .) %>% 
+    mutate(Cover_Type = case_when(
+    Cover_Type == 1 ~ "cover_type_1",
+    Cover_Type == 2 ~ "cover_type_2",
+    Cover_Type == 3 ~ "cover_type_3",
+    Cover_Type == 4 ~ "cover_type_4",
+    Cover_Type == 5 ~ "cover_type_5",
+    Cover_Type == 6 ~ "cover_type_6",
+    Cover_Type == 7 ~ "cover_type_7"
+  )) %>% 
+  # mutate(Cover_Type = factor(Cover_Type)) %>% 
+  select(-Id) 
+} 
+
+EOF
+```
+
+Notice that I have made a very simple adjustment so that the function will behave appropriately based on what kind of object we are passing to it.
+
+Unfortunately this chain requires the data to be processsed in R if we call it on a spark table, a better function can be created where the scaling is performed in spark using either a different scaling method or using spark apply functions.
+

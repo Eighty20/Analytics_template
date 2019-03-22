@@ -9,6 +9,7 @@ library(sparklyr)
 library(rsparkling)
 library(h2o)
 library(arrow)
+library(recipes)
 
 config = spark_config()
 
@@ -28,26 +29,15 @@ test_tbl = spark_read_csv(sc, name = "cover_type_test", path = "../data/raw/test
 ## Data pipeline
 
 ```{r}
-data_pipeline <- 
-  . %>% 
-    mutate(Cover_Type = case_when(
-    Cover_Type == 1 ~ "cover_type_1",
-    Cover_Type == 2 ~ "cover_type_2",
-    Cover_Type == 3 ~ "cover_type_3",
-    Cover_Type == 4 ~ "cover_type_4",
-    Cover_Type == 5 ~ "cover_type_5",
-    Cover_Type == 6 ~ "cover_type_6",
-    Cover_Type == 7 ~ "cover_type_7"
-  )) %>% 
-  # mutate(Cover_Type = factor(Cover_Type)) %>% 
-  select(-Id)
+source("../src/data_features/data_pipeline.r")
 ```
 
 We can test the pipeline on the training set
 
 ```{r}
-data_pipeline(train_tbl)
+  data_pipeline(train_tbl)
 ```
+
 
 It is important to note that the pipeline is executed on the spark connection in this case because the input to the function is a spark frame.
 
@@ -103,9 +93,161 @@ h2o.download_pojo(model = gbm_model,path = "../models/")
 h2o.download_mojo(model = gbm_model,path = "../models/")
 ```
 
+Let's test these objects
+
+Load a sample of data we can test the model on
+
+```{r}
+test_sample <- 
+  read_csv("../data/raw/train.csv") %>% 
+  sample_n(size = 10,replace = F) %>% 
+  data_pipeline()
+  
+```
+
+See if we can make predictions
+
+```{r}
+h2o::h2o.mojo_predict_df(frame = test_sample,mojo_zip_path = "../models/GBM_model_R_1553005339156_4.zip")
+```
 
 ## Model pipeline
 
 Now that we have our POJO and MOJO objects we can create a simple application that uses them to make predictions
 
+```{bash}
+cat > ../src/models/predict.R <<EOF
 
+# script name:
+# predict.R
+
+# set API title and description to show up in curl "http://127.0.0.1:8000/predict"/__swagger__/
+#' @apiTitle Run predictions for the cover type
+#' @apiDescription This API takes various data on features such as soil samples related to the forest canopy and predicts what cover type is present.
+#' indicates cover type
+
+# load model
+# this path would have to be adapted if you would deploy this
+data_pipeline_path = "/home/stefan/non_packrat/Analytics_template/src/data_features/data_pipeline.r"
+recipe_path = "/home/stefan/non_packrat/Analytics_template/models/data_recipe_pipeline.rds"
+source(data_pipeline_path)
+
+
+#' Log system time, request method and HTTP user agent of the incoming request
+#' @filter logger
+function(req){
+  cat("System time:", as.character(Sys.time()), "\n",
+      "Request method:", req$REQUEST_METHOD, req$PATH_INFO, "\n",
+      "HTTP user agent:", req$HTTP_USER_AGENT, "@", req$REMOTE_ADDR, "\n")
+  plumber::forward()
+}
+
+# core function follows below:
+# define parameters with type and description
+# name endpoint
+# return output as html/text
+# specify 200 (okay) return
+
+#' predict Cover Type using H2O gradient boosted model, expects the following variables as imput
+#' @param Id
+#' @param Elevation
+#' @param Aspect
+#' @param Slope
+#' @param Horizontal_Distance_To_Hydrology
+#' @param Vertical_Distance_To_Hydrology
+#' @param Horizontal_Distance_To_Roadways
+#' @param Hillshade_9am
+#' @param Hillshade_Noon
+#' @param Hillshade_3pm
+#' @param Horizontal_Distance_To_Fire_Points
+#' @param Wilderness_Area1
+#' @param Wilderness_Area2
+#' @param Wilderness_Area3
+#' @param Wilderness_Area4
+#' @param Soil_Type1
+#' @param Soil_Type2
+#' @param Soil_Type3
+#' @param Soil_Type4
+#' @param Soil_Type5
+#' @param Soil_Type6
+#' @param Soil_Type7
+#' @param Soil_Type8
+#' @param Soil_Type9
+#' @param Soil_Type10
+#' @param Soil_Type11
+#' @param Soil_Type12
+#' @param Soil_Type13
+#' @param Soil_Type14
+#' @param Soil_Type15
+#' @param Soil_Type16
+#' @param Soil_Type17
+#' @param Soil_Type18
+#' @param Soil_Type19
+#' @param Soil_Type20
+#' @param Soil_Type21
+#' @param Soil_Type22
+#' @param Soil_Type23
+#' @param Soil_Type24
+#' @param Soil_Type25
+#' @param Soil_Type26
+#' @param Soil_Type27
+#' @param Soil_Type28
+#' @param Soil_Type29
+#' @param Soil_Type30
+#' @param Soil_Type31
+#' @param Soil_Type32
+#' @param Soil_Type33
+#' @param Soil_Type34
+#' @param Soil_Type35
+#' @param Soil_Type36
+#' @param Soil_Type37
+#' @param Soil_Type38
+#' @param Soil_Type39
+#' @param Soil_Type40
+#' @param Cover_Type
+#' @post /predict
+#' @html
+#' @response 200 Returns the cover type predicted by the H2O gradient boosted classifier
+calculate_prediction <- function() {
+  
+  # make data frame from parameters
+  input_data <- data.frame(vore,bodywt,brainwt,awake,stringsAsFactors = FALSE)
+  
+  input_data <- 
+    input_data %>% 
+    mutate(
+        vore = vore %>% as.numeric(),
+            bodywt = bodywt %>% as.numeric(),
+            brainwt = brainwt %>% as.numeric(),
+            awake = awake %>% as.numeric()
+    )
+  
+  # and make sure they really are the right format
+  if(all(input_data["vore"] %>% class != "character")){
+    res$status <- 400
+    res$body <- "Parameters have to be in the right format. vore - character"
+  }
+  
+  if( all(input_data[c("bodywt","brainwt","awake")] %>% class != "numeric") ){
+    res$status <- 400
+    res$body <- "Parameters have to be in the right format. vore - character"
+  }
+  
+  # validation for parameter
+  if (any(is.na(input_data))) {
+    res$status <- 400
+    res$body <- "Parameters have to be numeric or integers - NA's intriduced by coercion"
+  }
+
+  # predict and return result
+  pred_h2o <- predict(example_model, input_data)
+  paste("----------------\nNext sleep cycle predicted to be", as.character(pred_rf), "\n----------------\n")
+}
+
+EOF
+```
+
+Note the following;
+
+- In a normal production environment you will probably have to setup this part as a seperate light weight docker file  
+- You will naturally have to open up a port to be able to test this API  
