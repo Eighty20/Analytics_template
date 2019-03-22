@@ -10,6 +10,7 @@ library(rsparkling)
 library(h2o)
 library(arrow)
 library(recipes)
+library(jsonlite)
 
 config = spark_config()
 
@@ -35,7 +36,7 @@ source("../src/data_features/data_pipeline.r")
 We can test the pipeline on the training set
 
 ```{r}
-  data_pipeline(train_tbl)
+data_pipeline(train_tbl)
 ```
 
 
@@ -100,20 +101,31 @@ Load a sample of data we can test the model on
 ```{r}
 test_sample <- 
   read_csv("../data/raw/train.csv") %>% 
-  sample_n(size = 10,replace = F) %>% 
-  data_pipeline()
+  sample_n(size = 10,replace = F) 
+
+# %>% 
+  # data_pipeline()
+
+test_sample_json <- toJSON(test_sample)
+
+test_sample <- fromJSON(test_sample_json) %>% data_pipeline()
   
+test_sample
 ```
+
+Note that I have tested the pipeline using the data as a JSON input
 
 See if we can make predictions
 
 ```{r}
-h2o::h2o.mojo_predict_df(frame = test_sample,mojo_zip_path = "../models/GBM_model_R_1553005339156_4.zip")
+h2o.mojo_predict_df(frame = test_sample,mojo_zip_path = "../models/GBM_model_R_1553005339156_4.zip")
 ```
 
 ## Model pipeline
 
 Now that we have our POJO and MOJO objects we can create a simple application that uses them to make predictions
+
+First we create a script describing the API that has a predict function
 
 ```{bash}
 cat > ../src/models/predict.R <<EOF
@@ -208,46 +220,81 @@ function(req){
 #' @post /predict
 #' @html
 #' @response 200 Returns the cover type predicted by the H2O gradient boosted classifier
-calculate_prediction <- function() {
-  
-  # make data frame from parameters
-  input_data <- data.frame(vore,bodywt,brainwt,awake,stringsAsFactors = FALSE)
-  
-  input_data <- 
-    input_data %>% 
-    mutate(
-        vore = vore %>% as.numeric(),
-            bodywt = bodywt %>% as.numeric(),
-            brainwt = brainwt %>% as.numeric(),
-            awake = awake %>% as.numeric()
-    )
-  
-  # and make sure they really are the right format
-  if(all(input_data["vore"] %>% class != "character")){
-    res$status <- 400
-    res$body <- "Parameters have to be in the right format. vore - character"
-  }
-  
-  if( all(input_data[c("bodywt","brainwt","awake")] %>% class != "numeric") ){
-    res$status <- 400
-    res$body <- "Parameters have to be in the right format. vore - character"
-  }
-  
-  # validation for parameter
-  if (any(is.na(input_data))) {
-    res$status <- 400
-    res$body <- "Parameters have to be numeric or integers - NA's intriduced by coercion"
-  }
+calculate_prediction <- function(req) {
+
+  input_df = fromJSON(req$postBody) %>% data_pipeline()
 
   # predict and return result
-  pred_h2o <- predict(example_model, input_data)
-  paste("----------------\nNext sleep cycle predicted to be", as.character(pred_rf), "\n----------------\n")
+  ## pred_h2o <- h2o.predict_json('/home/stefan/non_packrat/Analytics_template/models/GBM_model_R_1553005339156_4.zip',json_data)
+  
+  pred_h2o <- h2o.mojo_predict_df(frame = input_df,mojo_zip_path = '/home/stefan/non_packrat/Analytics_template/models/GBM_model_R_1553005339156_4.zip')
+  
+  print(pred_h2o)
 }
 
 EOF
+```
+
+Now we create a script that will serve this function as a REST API
+
+```{bash}
+cat > ../src/models/serve_h2o_model.R <<EOF
+
+#!/usr/bin/env R
+
+library(tidyverse)
+library(sparklyr)
+library(rsparkling)
+library(h2o)
+library(arrow)
+library(recipes)
+library(jsonlite)
+library(plumber)
+
+r <- plumb("/home/stefan/non_packrat/Analytics_template/src/models/predict.R ")
+r$run(host = "0.0.0.0", port=8000)
+
+EOF
+```
+
+And make it executable
+
+```{bash}
+chmod +x ../src/models/predict.R
+```
+
+```{bash}
+ls -l ../src/models/predict.R
+```
+
+```{bash}
+Rscript ../src/models/predict.R
 ```
 
 Note the following;
 
 - In a normal production environment you will probably have to setup this part as a seperate light weight docker file  
 - You will naturally have to open up a port to be able to test this API  
+
+Now let's try to use the API
+
+Get some json
+
+```{r}
+fromJSON(test_sample_json) %>% data_pipeline() %>% toJSON
+```
+
+```{r}
+fromJSON(test_sample_json) %>% data_pipeline() %>% toJSON %>% 
+  write_json(path = "../data/interim/test_jason")
+```
+
+```{bash}
+head ../data/interim/test_jason
+```
+
+
+```{bash}
+curl -H "Content-Type: application/json" -X POST -d /home/stefan/non_packrat/Analytics_template/data/interim/test_jason http://127.0.0.1:8000/predict
+```
+
