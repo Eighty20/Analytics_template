@@ -3,7 +3,7 @@
 # predict.R
 
 # set API title and description to show up in curl "http://127.0.0.1:8000/predict"/__swagger__/
-#' @apiTitle Run predictions for the cover type
+#' @apiTitle Run predictions for the forest cover type based on various sample data
 #' @apiDescription This API takes various data on features such as soil samples related to the forest canopy and predicts what cover type is present.
 #' indicates cover type
 
@@ -12,16 +12,6 @@
 data_pipeline_path = "/home/stefan/non_packrat/Analytics_template/src/data_features/data_pipeline.r"
 recipe_path = "/home/stefan/non_packrat/Analytics_template/models/data_recipe_pipeline.rds"
 source(data_pipeline_path)
-
-
-#' Log system time, request method and HTTP user agent of the incoming request
-#' @filter logger
-function(req){
-  cat("System time:", as.character(Sys.time()), "\n",
-      "Request method:", req, req, "\n",
-      "HTTP user agent:", req, "@", req, "\n")
-  plumber::forward()
-}
 
 # core function follows below:
 # define parameters with type and description
@@ -86,18 +76,16 @@ function(req){
 #' @param Soil_Type39
 #' @param Soil_Type40
 #' @param Cover_Type
-#' @post /predict
-#' @html
-#' @response 200 Returns the cover type predicted by the H2O gradient boosted classifier
+#' @get /predict
 calculate_prediction <- function(req) {
-
-  input_df = fromJSON(req) %>% data_pipeline()
-
-  # predict and return result
-  ## pred_h2o <- h2o.predict_json('/home/stefan/non_packrat/Analytics_template/models/GBM_model_R_1553005339156_4.zip',json_data)
   
-  pred_h2o <- h2o.mojo_predict_df(frame = input_df,mojo_zip_path = '/home/stefan/non_packrat/Analytics_template/models/GBM_model_R_1553005339156_4.zip')
+  input_json = fromJSON(txt = req$postBody) %>% data_pipeline() %>% toJSON()
   
-  print(pred_h2o)
+  pred_h2o = h2o.predict_json(model = '/home/stefan/non_packrat/Analytics_template/models/GBM_model_R_1553005339156_4.zip',json = input_json)
+  
+  req <- paste(pred_h2o %>% toJSON)
+
+  req
+  
 }
 

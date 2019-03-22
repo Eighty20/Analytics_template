@@ -10,6 +10,6 @@ library(recipes)
 library(jsonlite)
 library(plumber)
 
-r <- plumb("/home/stefan/non_packrat/Analytics_template/src/models/predict.R ")
-r(host = "0.0.0.0", port=8000)
+r <- plumb("/home/stefan/non_packrat/Analytics_template/src/models/predict.R")
+r$run(host = "0.0.0.0", port=8000)
 

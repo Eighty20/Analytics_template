@@ -1,0 +1,2 @@
+03-22 18:59:39.322 127.0.0.1:54321       208    #9608-326 WARN: _train: Dropping bad and constant columns: [Soil_Type7, Soil_Type15]
+03-22 18:59:55.737 127.0.0.1:54321       208    #9608-324 WARN: _train: Dropping bad and constant columns: [Soil_Type7, Soil_Type15]

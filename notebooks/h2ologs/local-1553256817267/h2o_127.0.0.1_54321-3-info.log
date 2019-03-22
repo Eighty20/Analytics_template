@@ -1,0 +1,510 @@
+03-22 18:59:17.357 127.0.0.1:54321       208    #r thread INFO: Sparkling Water version: 2.4.1
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO: Spark version: 2.4.0
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO: Integrated H2O version: 3.22.0.3
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO: The following Spark configuration is used: 
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.app.id,local-1553256817267)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.home,/home/stefan/spark/spark-2.4.0-bin-hadoop2.7)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.master,local[14])
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.repl.local.jars,file:///home/stefan/.ivy2/jars/ai.h2o_sparkling-water-core_2.11-2.4.1.jar,file:///home/stefan/.ivy2/jars/ai.h2o_sparkling-water-ml_2.11-2.4.1.jar,file:///home/stefan/.ivy2/jars/ai.h2o_sparkling-water-repl_2.11-2.4.1.jar,file:///home/stefan/.ivy2/jars/no.priv.garshol.duke_duke-1.2.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-genmodel-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-core-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-algos-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-web-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-avro-parser-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-ext-xgboost-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-genmodel-ext-xgboost-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-parquet-parser-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-orc-parser-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-scala_2.11-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-persist-hdfs-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-persist-s3-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-persist-gcs-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-automl-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/org.joda_joda-convert-1.7.jar,file:///home/stefan/.ivy2/jars/org.scala-lang_scala-compiler-2.11.12.jar,file:///home/stefan/.ivy2/jars/net.sf.opencsv_opencsv-2.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_deepwater-backend-api-1.0.4.jar,file:///home/stefan/.ivy2/jars/joda-time_joda-time-2.9.9.jar,file:///home/stefan/.ivy2/jars/gov.nist.math_jama-1.0.3.jar,file:///home/stefan/.ivy2/jars/org.javassist_javassist-3.23.1-GA.jar,file:///home/stefan/.ivy2/jars/org.apache.commons_commons-math3-3.3.jar,file:///home/stefan/.ivy2/jars/commons-io_commons-io-2.4.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty.aggregate_jetty-servlet-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-plus-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/com.github.rwl_jtransforms-2.4.0.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-jaas-pam-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/log4j_log4j-1.2.17.jar,file:///home/stefan/.ivy2/jars/commons-lang_commons-lang-2.6.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty.orbit_javax.transaction-1.1.1.v201105210645.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-webapp-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-jndi-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-xml-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-servlet-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-util-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-security-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-server-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty.orbit_javax.servlet-3.0.0.v201112011016.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-continuation-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-http-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-io-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty.orbit_javax.mail.glassfish-1.4.1.v201005082020.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty.orbit_javax.activation-1.1.0.v201105071233.jar,file:///home/stefan/.ivy2/jars/org.kohsuke_libpam4j-1.8.jar,file:///home/stefan/.ivy2/jars/net.java.dev.jna_jna-4.0.0.jar,file:///home/stefan/.ivy2/jars/org.apache.lucene_lucene-core-4.0.0.jar,file:///home/stefan/.ivy2/jars/org.apache.lucene_lucene-analyzers-common-4.0.0.jar,file:///home/stefan/.ivy2/jars/org.apache.lucene_lucene-spatial-4.0.0.jar,file:///home/stefan/.ivy2/jars/org.mapdb_mapdb-0.9.9.jar,file:///home/stefan/.ivy2/jars/com.spatial4j_spatial4j-0.3.jar,file:///home/stefan/.ivy2/jars/org.apache.lucene_lucene-queries-4.0.0.jar,file:///home/stefan/.ivy2/jars/com.github.fommil.netlib_core-1.1.2.jar,file:/home/stefan/.ivy2/jars/net.sourceforge.f2j_arpack_combined_all-0.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_ref-osx-x86_64-1.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_ref-linux-x86_64-1.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_ref-win-x86_64-1.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_ref-linux-armhf-1.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_system-osx-x86_64-1.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_system-linux-x86_64-1.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_system-linux-armhf-1.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_system-win-x86_64-1.1.jar,file:///home/stefan/.ivy2/jars/com.googlecode.matrix-toolkits-java_mtj-1.0.4.jar,file:///home/stefan/.ivy2/jars/com.github.fommil.netlib_native_ref-java-1.1.jar,file:///home/stefan/.ivy2/jars/com.github.fommil_jniloader-1.1.jar,file:///home/stefan/.ivy2/jars/com.github.fommil.netlib_native_system-java-1.1.jar,file:///home/stefan/.ivy2/jars/ai.h2o_xgboost-predictor-0.3.5.jar,file:///home/stefan/.ivy2/jars/ai.h2o_xgboost4j-0.7.13.jar,file:///home/stefan/.ivy2/jars/ai.h2o_xgboost4j-linux-gpuv4-0.7.13.jar,file:///home/stefan/.ivy2/jars/ai.h2o_xgboost4j-linux-minimal-0.7.13.jar,file:///home/stefan/.ivy2/jars/ai.h2o_xgboost4j-osx-minimal-0.7.13.jar,file:///home/stefan/.ivy2/jars/ai.h2o_xgboost4j-linux-ompv3-0.7.13.jar,file:///home/stefan/.ivy2/jars/commons-logging_commons-logging-1.2.jar,file:///home/stefan/.ivy2/jars/net.java.dev.jets3t_jets3t-0.9.0.jar,file:///home/stefan/.ivy2/jars/com.jamesmurty.utils_java-xmlbuilder-0.4.jar,file:///home/stefan/.ivy2/jars/com.amazonaws_aws-java-sdk-s3-1.10.77.jar,file:///home/stefan/.ivy2/jars/org.apache.httpcomponents_httpclient-4.3.6.jar,file:///home/stefan/.ivy2/jars/javax.xml.bind_jaxb-api-2.3.0.jar,file:///home/stefan/.ivy2/jars/com.amazonaws_aws-java-sdk-kms-1.10.77.jar,file:///home/stefan/.ivy2/jars/com.amazonaws_aws-java-sdk-core-1.10.77.jar,file:///home/stefan/.ivy2/jars/com.fasterxml.jackson.dataformat_jackson-dataformat-cbor-2.5.3.jar,file:///home/stefan/.ivy2/jars/org.apache.httpcomponents_httpcore-4.3.3.jar,file:///home/stefan/.ivy2/jars/commons-codec_commons-codec-1.6.jar,file:///home/stefan/.ivy2/jars/com.google.cloud_google-cloud-storage-1.19.0.jar,file:///home/stefan/.ivy2/jars/com.google.cloud_google-cloud-core-1.19.0.jar,file:///home/stefan/.ivy2/jars/com.google.cloud_google-cloud-core-http-1.19.0.jar,file:///home/stefan/.ivy2/jars/com.google.apis_google-api-services-storage-v1-rev114-1.23.0.jar,file:///home/stefan/.ivy2/jars/com.google.guava_guava-20.0.jar,file:///home/stefan/.ivy2/jars/com.google.http-client_google-http-client-1.23.0.jar,file:///home/stefan/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.1.jar,file:///home/stefan/.ivy2/jars/com.google.api_api-common-1.3.0.jar,file:///home/stefan/.ivy2/jars/com.google.api_gax-1.19.0.jar,file:///home/stefan/.ivy2/jars/com.google.protobuf_protobuf-java-util-3.5.1.jar,file:///home/stefan/.ivy2/jars/com.google.api.grpc_proto-google-common-protos-1.1.1.jar,file:///home/stefan/.ivy2/jars/com.google.api.grpc_proto-google-iam-v1-0.2.1.jar,file:///home/stefan/.ivy2/jars/org.threeten_threetenbp-1.3.3.jar,file:///home/stefan/.ivy2/jars/com.google.auth_google-auth-library-oauth2-http-0.9.0.jar,file:///home/stefan/.ivy2/jars/com.google.auth_google-auth-library-credentials-0.9.0.jar,file:///home/stefan/.ivy2/jars/com.google.http-client_google-http-client-jackson2-1.23.0.jar,file:///home/stefan/.ivy2/jars/com.fasterxml.jackson.core_jackson-core-2.1.3.jar,file:///home/stefan/.ivy2/jars/com.google.protobuf_protobuf-java-3.5.1.jar,file:///home/stefan/.ivy2/jars/com.google.code.gson_gson-2.7.jar,file:///home/stefan/.ivy2/jars/com.google.oauth-client_google-oauth-client-1.23.0.jar,file:///home/stefan/.ivy2/jars/com.google.api-client_google-api-client-1.23.0.jar,file:///home/stefan/.ivy2/jars/com.google.http-client_google-http-client-appengine-1.23.0.jar,file:///home/stefan/.ivy2/jars/com.google.http-client_google-http-client-jackson-1.23.0.jar,file:///home/stefan/.ivy2/jars/com.google.api_gax-httpjson-0.36.0.jar,file:///home/stefan/.ivy2/jars/io.opencensus_opencensus-api-0.11.1.jar,file:///home/stefan/.ivy2/jars/io.opencensus_opencensus-contrib-http-util-0.11.1.jar,file:///home/stefan/.ivy2/jars/org.codehaus.jackson_jackson-core-asl-1.9.11.jar,file:///home/stefan/.ivy2/jars/com.google.errorprone_error_prone_annotations-2.2.0.jar,file:///home/stefan/.ivy2/jars/io.grpc_grpc-context-1.9.0.jar,file:///home/stefan/.ivy2/jars/org.scala-lang_scala-reflect-2.11.12.jar,file:///home/stefan/.ivy2/jars/org.scala-lang.modules_scala-xml_2.11-1.0.5.jar,file:///home/stefan/.ivy2/jars/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.4.jar,file:///home/stefan/.ivy2/jars/ai.h2o_mojo2-runtime-api-0.13.7.jar)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.executor.id,driver)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.driver.host,localhost)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.driver.memory,8G)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.app.name,sparklyr)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.ext.h2o.client.log.dir,/home/stefan/non_packrat/Analytics_template/notebooks/h2ologs/local-1553256817267)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.sql.catalogImplementation,hive)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.locality.wait,30000)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.ext.h2o.cloud.name,sparkling-water-stefan_local-1553256817267)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.driver.port,44985)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.sql.shuffle.partitions,14)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.ext.h2o.client.ip,localhost)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.jars,file:///home/stefan/.ivy2/jars/ai.h2o_sparkling-water-core_2.11-2.4.1.jar,file:///home/stefan/.ivy2/jars/ai.h2o_sparkling-water-ml_2.11-2.4.1.jar,file:///home/stefan/.ivy2/jars/ai.h2o_sparkling-water-repl_2.11-2.4.1.jar,file:///home/stefan/.ivy2/jars/no.priv.garshol.duke_duke-1.2.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-genmodel-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-core-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-algos-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-web-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-avro-parser-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-ext-xgboost-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-genmodel-ext-xgboost-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-parquet-parser-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-orc-parser-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-scala_2.11-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-persist-hdfs-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-persist-s3-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-persist-gcs-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-automl-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/org.joda_joda-convert-1.7.jar,file:///home/stefan/.ivy2/jars/org.scala-lang_scala-compiler-2.11.12.jar,file:///home/stefan/.ivy2/jars/net.sf.opencsv_opencsv-2.3.jar,file:///home/stefan/.ivy2/jars/ai.h2o_deepwater-backend-api-1.0.4.jar,file:///home/stefan/.ivy2/jars/joda-time_joda-time-2.9.9.jar,file:///home/stefan/.ivy2/jars/gov.nist.math_jama-1.0.3.jar,file:///home/stefan/.ivy2/jars/org.javassist_javassist-3.23.1-GA.jar,file:///home/stefan/.ivy2/jars/org.apache.commons_commons-math3-3.3.jar,file:///home/stefan/.ivy2/jars/commons-io_commons-io-2.4.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty.aggregate_jetty-servlet-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-plus-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/com.github.rwl_jtransforms-2.4.0.jar,file:///home/stefan/.ivy2/jars/ai.h2o_h2o-jaas-pam-3.22.0.3.jar,file:///home/stefan/.ivy2/jars/log4j_log4j-1.2.17.jar,file:///home/stefan/.ivy2/jars/commons-lang_commons-lang-2.6.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty.orbit_javax.transaction-1.1.1.v201105210645.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-webapp-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-jndi-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-xml-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-servlet-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-util-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-security-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-server-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty.orbit_javax.servlet-3.0.0.v201112011016.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-continuation-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-http-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty_jetty-io-8.1.17.v20150415.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty.orbit_javax.mail.glassfish-1.4.1.v201005082020.jar,file:///home/stefan/.ivy2/jars/org.eclipse.jetty.orbit_javax.activation-1.1.0.v201105071233.jar,file:///home/stefan/.ivy2/jars/org.kohsuke_libpam4j-1.8.jar,file:///home/stefan/.ivy2/jars/net.java.dev.jna_jna-4.0.0.jar,file:///home/stefan/.ivy2/jars/org.apache.lucene_lucene-core-4.0.0.jar,file:///home/stefan/.ivy2/jars/org.apache.lucene_lucene-analyzers-common-4.0.0.jar,file:///home/stefan/.ivy2/jars/org.apache.lucene_lucene-spatial-4.0.0.jar,file:///home/stefan/.ivy2/jars/org.mapdb_mapdb-0.9.9.jar,file:///home/stefan/.ivy2/jars/com.spatial4j_spatial4j-0.3.jar,file:///home/stefan/.ivy2/jars/org.apache.lucene_lucene-queries-4.0.0.jar,file:///home/stefan/.ivy2/jars/com.github.fommil.netlib_core-1.1.2.jar,file:/home/stefan/.ivy2/jars/net.sourceforge.f2j_arpack_combined_all-0.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_ref-osx-x86_64-1.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_ref-linux-x86_64-1.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_ref-win-x86_64-1.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_ref-linux-armhf-1.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_system-osx-x86_64-1.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_system-linux-x86_64-1.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_system-linux-armhf-1.1.jar,file:/home/stefan/.ivy2/jars/com.github.fommil.netlib_netlib-native_system-win-x86_64-1.1.jar,file:///home/stefan/.ivy2/jars/com.googlecode.matrix-toolkits-java_mtj-1.0.4.jar,file:///home/stefan/.ivy2/jars/com.github.fommil.netlib_native_ref-java-1.1.jar,file:///home/stefan/.ivy2/jars/com.github.fommil_jniloader-1.1.jar,file:///home/stefan/.ivy2/jars/com.github.fommil.netlib_native_system-java-1.1.jar,file:///home/stefan/.ivy2/jars/ai.h2o_xgboost-predictor-0.3.5.jar,file:///home/stefan/.ivy2/jars/ai.h2o_xgboost4j-0.7.13.jar,file:///home/stefan/.ivy2/jars/ai.h2o_xgboost4j-linux-gpuv4-0.7.13.jar,file:///home/stefan/.ivy2/jars/ai.h2o_xgboost4j-linux-minimal-0.7.13.jar,file:///home/stefan/.ivy2/jars/ai.h2o_xgboost4j-osx-minimal-0.7.13.jar,file:///home/stefan/.ivy2/jars/ai.h2o_xgboost4j-linux-ompv3-0.7.13.jar,file:///home/stefan/.ivy2/jars/commons-logging_commons-logging-1.2.jar,file:///home/stefan/.ivy2/jars/net.java.dev.jets3t_jets3t-0.9.0.jar,file:///home/stefan/.ivy2/jars/com.jamesmurty.utils_java-xmlbuilder-0.4.jar,file:///home/stefan/.ivy2/jars/com.amazonaws_aws-java-sdk-s3-1.10.77.jar,file:///home/stefan/.ivy2/jars/org.apache.httpcomponents_httpclient-4.3.6.jar,file:///home/stefan/.ivy2/jars/javax.xml.bind_jaxb-api-2.3.0.jar,file:///home/stefan/.ivy2/jars/com.amazonaws_aws-java-sdk-kms-1.10.77.jar,file:///home/stefan/.ivy2/jars/com.amazonaws_aws-java-sdk-core-1.10.77.jar,file:///home/stefan/.ivy2/jars/com.fasterxml.jackson.dataformat_jackson-dataformat-cbor-2.5.3.jar,file:///home/stefan/.ivy2/jars/org.apache.httpcomponents_httpcore-4.3.3.jar,file:///home/stefan/.ivy2/jars/commons-codec_commons-codec-1.6.jar,file:///home/stefan/.ivy2/jars/com.google.cloud_google-cloud-storage-1.19.0.jar,file:///home/stefan/.ivy2/jars/com.google.cloud_google-cloud-core-1.19.0.jar,file:///home/stefan/.ivy2/jars/com.google.cloud_google-cloud-core-http-1.19.0.jar,file:///home/stefan/.ivy2/jars/com.google.apis_google-api-services-storage-v1-rev114-1.23.0.jar,file:///home/stefan/.ivy2/jars/com.google.guava_guava-20.0.jar,file:///home/stefan/.ivy2/jars/com.google.http-client_google-http-client-1.23.0.jar,file:///home/stefan/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.1.jar,file:///home/stefan/.ivy2/jars/com.google.api_api-common-1.3.0.jar,file:///home/stefan/.ivy2/jars/com.google.api_gax-1.19.0.jar,file:///home/stefan/.ivy2/jars/com.google.protobuf_protobuf-java-util-3.5.1.jar,file:///home/stefan/.ivy2/jars/com.google.api.grpc_proto-google-common-protos-1.1.1.jar,file:///home/stefan/.ivy2/jars/com.google.api.grpc_proto-google-iam-v1-0.2.1.jar,file:///home/stefan/.ivy2/jars/org.threeten_threetenbp-1.3.3.jar,file:///home/stefan/.ivy2/jars/com.google.auth_google-auth-library-oauth2-http-0.9.0.jar,file:///home/stefan/.ivy2/jars/com.google.auth_google-auth-library-credentials-0.9.0.jar,file:///home/stefan/.ivy2/jars/com.google.http-client_google-http-client-jackson2-1.23.0.jar,file:///home/stefan/.ivy2/jars/com.fasterxml.jackson.core_jackson-core-2.1.3.jar,file:///home/stefan/.ivy2/jars/com.google.protobuf_protobuf-java-3.5.1.jar,file:///home/stefan/.ivy2/jars/com.google.code.gson_gson-2.7.jar,file:///home/stefan/.ivy2/jars/com.google.oauth-client_google-oauth-client-1.23.0.jar,file:///home/stefan/.ivy2/jars/com.google.api-client_google-api-client-1.23.0.jar,file:///home/stefan/.ivy2/jars/com.google.http-client_google-http-client-appengine-1.23.0.jar,file:///home/stefan/.ivy2/jars/com.google.http-client_google-http-client-jackson-1.23.0.jar,file:///home/stefan/.ivy2/jars/com.google.api_gax-httpjson-0.36.0.jar,file:///home/stefan/.ivy2/jars/io.opencensus_opencensus-api-0.11.1.jar,file:///home/stefan/.ivy2/jars/io.opencensus_opencensus-contrib-http-util-0.11.1.jar,file:///home/stefan/.ivy2/jars/org.codehaus.jackson_jackson-core-asl-1.9.11.jar,file:///home/stefan/.ivy2/jars/com.google.errorprone_error_prone_annotations-2.2.0.jar,file:///home/stefan/.ivy2/jars/io.grpc_grpc-context-1.9.0.jar,file:///home/stefan/.ivy2/jars/org.scala-lang_scala-reflect-2.11.12.jar,file:///home/stefan/.ivy2/jars/org.scala-lang.modules_scala-xml_2.11-1.0.5.jar,file:///home/stefan/.ivy2/jars/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.4.jar,file:///home/stefan/.ivy2/jars/ai.h2o_mojo2-runtime-api-0.13.7.jar,file:/home/stefan/R/x86_64-pc-linux-gnu-library/3.5/sparklyr/java/sparklyr-2.3-2.11.jar)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.submit.deployMode,client)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.spark.port.maxRetries,128)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.memory.fraction,0.9)
+03-22 18:59:17.370 127.0.0.1:54321       208    #r thread INFO:     (spark.env.SPARK_LOCAL_IP,127.0.0.1)
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: 
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: Found XGBoost backend with library: xgboost4j_gpu
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: XGBoost supported backends: [WITH_GPU, WITH_OMP]
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: ----- H2O started  -----
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: Build git branch: rel-xia
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: Build git hash: a34355c651e258a4266e880665cb543c457bdc84
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: Build git describe: jenkins-3.22.0.2-84-ga34355c
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: Build project version: 3.22.0.3
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: Build age: 3 months
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: Built by: 'jenkins'
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: Built on: '2018-12-21 23:43:17'
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: Watchdog Build git branch: (unknown)
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: Watchdog Build git hash: (unknown)
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: Watchdog Build git describe: (unknown)
+03-22 18:59:17.371 127.0.0.1:54321       208    #r thread INFO: Watchdog Build project version: (unknown)
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: Watchdog Built by: (unknown)
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: Watchdog Built on: (unknown)
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: XGBoost Build git branch: (unknown)
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: XGBoost Build git hash: (unknown)
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: XGBoost Build git describe: (unknown)
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: XGBoost Build project version: (unknown)
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: XGBoost Built by: (unknown)
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: XGBoost Built on: (unknown)
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: Processed H2O arguments: [-name, sparkling-water-stefan_local-1553256817267, -port_offset, 1, -quiet, -log_level, INFO, -log_dir, /home/stefan/non_packrat/Analytics_template/notebooks/h2ologs/local-1553256817267, -baseport, 54321, -ip, localhost, -ip, localhost, -log_dir, /home/stefan/non_packrat/Analytics_template/notebooks/h2ologs/local-1553256817267]
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: Java availableProcessors: 14
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: Java heap totalMemory: 3.10 GB
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: Java heap maxMemory: 7.11 GB
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: Java version: Java 1.8.0_201 (from Oracle Corporation)
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: JVM launch parameters: [-Xmx8G]
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: OS version: Linux 4.14.83+ (amd64)
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: Machine physical memory: 39.05 GB
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: X-h2o-cluster-id: 1553273956577
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: User name: 'stefan'
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: IPv6 stack selected: false
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: Possible IP Address: eth0 (eth0), 172.17.0.3
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: Possible IP Address: lo (lo), 127.0.0.1
+03-22 18:59:17.372 127.0.0.1:54321       208    #r thread INFO: Selected H2O.CLOUD_MULTICAST_IF: name:lo (lo) doesn't support multicast
+03-22 18:59:17.390 127.0.0.1:54321       208    #r thread INFO: H2O node running in unencrypted mode.
+03-22 18:59:17.394 127.0.0.1:54321       208    #r thread INFO: Internal communication uses port: 54322
+03-22 18:59:17.394 127.0.0.1:54321       208    #r thread INFO: Listening for HTTP and REST traffic on http://127.0.0.1:54321/
+03-22 18:59:17.439 127.0.0.1:54321       208    #r thread INFO: H2O cloud name: 'sparkling-water-stefan_local-1553256817267' on localhost/127.0.0.1:54321, discovery address /230.221.243.228:59101
+03-22 18:59:17.440 127.0.0.1:54321       208    #r thread INFO: If you have trouble connecting, try SSH tunneling from your local machine (e.g., via port 55555):
+03-22 18:59:17.440 127.0.0.1:54321       208    #r thread INFO:   1. Open a terminal and run 'ssh -L 55555:localhost:54321 stefan@127.0.0.1'
+03-22 18:59:17.440 127.0.0.1:54321       208    #r thread INFO:   2. Point your browser to http://localhost:55555
+03-22 18:59:17.465 127.0.0.1:54321       208    #r thread INFO: Log dir: '/home/stefan/non_packrat/Analytics_template/notebooks/h2ologs/local-1553256817267'
+03-22 18:59:17.465 127.0.0.1:54321       208    #r thread INFO: Cur dir: '/home/stefan/non_packrat/Analytics_template/notebooks'
+03-22 18:59:17.491 127.0.0.1:54321       208    #r thread INFO: Distributed HTTP import not available (import from HTTP/HTTPS will be eager)
+03-22 18:59:17.496 127.0.0.1:54321       208    #r thread INFO: HDFS subsystem successfully initialized
+03-22 18:59:17.509 127.0.0.1:54321       208    #r thread INFO: S3 subsystem successfully initialized
+03-22 18:59:17.520 127.0.0.1:54321       208    #r thread INFO: GCS subsystem successfully initialized
+03-22 18:59:17.520 127.0.0.1:54321       208    #r thread INFO: Flow dir: '/home/stefan/h2oflows'
+03-22 18:59:17.538 127.0.0.1:54321       208    #r thread INFO: Cloud of size 1 formed [localhost/127.0.0.1:54321]
+03-22 18:59:17.654 127.0.0.1:54321       208    #r thread INFO: Registered parsers: [GUESS, ARFF, XLS, SVMLight, AVRO, ORC, PARQUET, CSV]
+03-22 18:59:17.657 127.0.0.1:54321       208    #r thread INFO: Watchdog extension initialized
+03-22 18:59:17.657 127.0.0.1:54321       208    #r thread INFO: XGBoost extension initialized
+03-22 18:59:17.657 127.0.0.1:54321       208    #r thread INFO: Registered 2 core extensions in: 213ms
+03-22 18:59:17.657 127.0.0.1:54321       208    #r thread INFO: Registered H2O core extensions: [Watchdog, XGBoost]
+03-22 18:59:18.605 127.0.0.1:54321       208    #r thread INFO: Registered: 169 REST APIs in: 948ms
+03-22 18:59:18.605 127.0.0.1:54321       208    #r thread INFO: Registered REST API extensions: [Algos, XGBoost, AutoML, Core V3, Core V4]
+03-22 18:59:18.742 127.0.0.1:54321       208    #r thread INFO: Registered: 257 schemas in 136ms
+03-22 18:59:18.742 127.0.0.1:54321       208    #r thread INFO: H2O started in 1849ms
+03-22 18:59:18.742 127.0.0.1:54321       208    #r thread INFO: 
+03-22 18:59:18.742 127.0.0.1:54321       208    #r thread INFO: Open H2O Flow in your web browser: http://127.0.0.1:54321
+03-22 18:59:18.742 127.0.0.1:54321       208    #r thread INFO: 
+03-22 18:59:27.020 127.0.0.1:54321       208    #9608-322 INFO: GET /, parms: {}
+03-22 18:59:27.154 127.0.0.1:54321       208    #9608-324 INFO: GET /, parms: {}
+03-22 18:59:27.188 127.0.0.1:54321       208    #9608-328 INFO: GET /3/Capabilities/API, parms: {}
+03-22 18:59:27.189 127.0.0.1:54321       208    #9608-328 INFO: Locking cloud to new members, because water.api.schemas3.CapabilitiesV3
+03-22 18:59:27.246 127.0.0.1:54321       208    #9608-322 INFO: GET /3/InitID, parms: {}
+03-22 18:59:28.006 127.0.0.1:54321       208    #9608-325 INFO: GET /3/Frames/frame_rdd_141_bd9839c9d16eb422d7705e11aa9949a4, parms: {row_count=10}
+03-22 18:59:28.513 127.0.0.1:54321       208    #9608-327 INFO: POST /99/Rapids, parms: {ast=(tmp= RTMP_sid_a2d8_1 (:= frame_rdd_141_bd9839c9d16eb422d7705e11aa9949a4 (as.factor (cols frame_rdd_141_bd9839c9d16eb422d7705e11aa9949a4 [54])) [54] [])), session_id=_sid_a2d8}
+03-22 18:59:29.307 127.0.0.1:54321       208    #9608-327 INFO: GET /3/Frames/RTMP_sid_a2d8_1, parms: {row_count=10}
+03-22 18:59:39.133 127.0.0.1:54321       208    #9608-324 INFO: GET /3/ModelBuilders/gbm, parms: {}
+03-22 18:59:39.229 127.0.0.1:54321       208    #9608-326 INFO: POST /3/ModelBuilders/gbm, parms: {training_frame=RTMP_sid_a2d8_1, response_column=Cover_Type, ignored_columns=[""]}
+03-22 18:59:39.322 127.0.0.1:54321       208    #9608-326 WARN: _train: Dropping bad and constant columns: [Soil_Type7, Soil_Type15]
+03-22 18:59:39.358 127.0.0.1:54321       208    FJ-1-15   INFO: Building H2O GBM model with these parameters:
+03-22 18:59:39.396 127.0.0.1:54321       208    FJ-1-15   INFO: {"_train":{"name":"RTMP_sid_a2d8_1","type":"Key"},"_valid":null,"_nfolds":0,"_keep_cross_validation_models":true,"_keep_cross_validation_predictions":false,"_keep_cross_validation_fold_assignment":false,"_parallelize_cross_validation":true,"_auto_rebalance":true,"_seed":-1,"_fold_assignment":"AUTO","_categorical_encoding":"AUTO","_max_categorical_levels":10,"_distribution":"AUTO","_tweedie_power":1.5,"_quantile_alpha":0.5,"_huber_alpha":0.9,"_ignored_columns":[""],"_ignore_const_cols":true,"_weights_column":null,"_offset_column":null,"_fold_column":null,"_is_cv_model":false,"_score_each_iteration":false,"_max_runtime_secs":0.0,"_stopping_rounds":0,"_stopping_metric":"AUTO","_stopping_tolerance":0.001,"_response_column":"Cover_Type","_balance_classes":false,"_max_after_balance_size":5.0,"_class_sampling_factors":null,"_max_confusion_matrix_size":20,"_checkpoint":null,"_pretrained_autoencoder":null,"_custom_metric_func":null,"_ntrees":50,"_max_depth":5,"_min_rows":10.0,"_nbins":20,"_nbins_cats":1024,"_min_split_improvement":1.0E-5,"_histogram_type":"AUTO","_r2_stopping":1.7976931348623157E308,"_nbins_top_level":1024,"_build_tree_one_node":false,"_score_tree_interval":0,"_initial_score_interval":4000,"_score_interval":4000,"_sample_rate":1.0,"_sample_rate_per_class":null,"_calibrate_model":false,"_calibration_frame":null,"_col_sample_rate_change_per_level":1.0,"_col_sample_rate_per_tree":1.0,"_learn_rate":0.1,"_learn_rate_annealing":1.0,"_col_sample_rate":1.0,"_max_abs_leafnode_pred":1.7976931348623157E308,"_pred_noise_bandwidth":0.0,"_monotone_constraints":null}
+03-22 18:59:39.402 127.0.0.1:54321       208    FJ-1-15   INFO: Dropping ignored columns: []
+03-22 18:59:39.403 127.0.0.1:54321       208    FJ-1-15   INFO: Rebalancing train dataset into 14 chunks.
+03-22 18:59:39.603 127.0.0.1:54321       208    FJ-1-15   INFO: Prior class distribution: [0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285]
+03-22 18:59:39.604 127.0.0.1:54321       208    FJ-1-15   INFO: Model class distribution: [0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285]
+03-22 18:59:39.648 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO: Model Metrics Type: Multinomial
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:  Description: N/A
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:  model id: GBM_model_R_1553273956577_1
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:  frame id: RTMP_sid_a2d8_1
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:  MSE: 0.7346939
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:  RMSE: 0.85714287
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:  logloss: 1.9459101
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:  mean_per_class_error: 0.85952383
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:  hit ratios: [0.1404762, 0.26408732, 0.34510583, 0.42976192, 0.51362437, 0.5734127, 1.0]
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:               cover_type_1  cover_type_2  cover_type_3  cover_type_4  cover_type_5  cover_type_6  cover_type_7   Error             Rate
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO: cover_type_1           303           320           296           293           346           313           289  0.8597    1,857 / 2,160
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO: cover_type_2           326           326           313           300           310           296           289  0.8491    1,834 / 2,160
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO: cover_type_3           330           312           295           349           297           286           291  0.8634    1,865 / 2,160
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO: cover_type_4           333           331           310           302           334           280           270  0.8602    1,858 / 2,160
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO: cover_type_5           302           309           301           325           299           305           319  0.8616    1,861 / 2,160
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO: cover_type_6           299           322           349           300           291           296           303  0.8630    1,864 / 2,160
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO: cover_type_7           301           327           281           303           343           302           303  0.8597    1,857 / 2,160
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:       Totals          2194          2247          2145          2172          2220          2078          2064  0.8595  12,996 / 15,120
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO: Model Summary:
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:  Number of Trees Number of Internal Trees Model Size in Bytes Min. Depth Max. Depth Mean Depth Min. Leaves Max. Leaves Mean Leaves
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:                0                        0                   0          0          0    0.00000           0           0     0.00000
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO: Scoring History:
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:            Timestamp   Duration Number of Trees Training RMSE Training LogLoss Training Classification Error
+03-22 18:59:39.793 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:39  0.225 sec               0       0.85714          1.94591                       0.85952
+03-22 18:59:40.424 127.0.0.1:54321       208    FJ-1-15   INFO: 1. tree was built in 00:00:00.621 (Wall: 22-Mar 18:59:40.422) 
+03-22 18:59:40.430 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:40.695 127.0.0.1:54321       208    FJ-1-15   INFO: 2. tree was built in 00:00:00.249 (Wall: 22-Mar 18:59:40.695) 
+03-22 18:59:40.696 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:40.842 127.0.0.1:54321       208    FJ-1-15   INFO: 3. tree was built in 00:00:00.141 (Wall: 22-Mar 18:59:40.842) 
+03-22 18:59:40.843 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:41.012 127.0.0.1:54321       208    FJ-1-15   INFO: 4. tree was built in 00:00:00.165 (Wall: 22-Mar 18:59:41.012) 
+03-22 18:59:41.013 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:41.133 127.0.0.1:54321       208    FJ-1-15   INFO: 5. tree was built in 00:00:00.116 (Wall: 22-Mar 18:59:41.133) 
+03-22 18:59:41.134 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:41.233 127.0.0.1:54321       208    FJ-1-15   INFO: 6. tree was built in 00:00:00.095 (Wall: 22-Mar 18:59:41.233) 
+03-22 18:59:41.234 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:41.313 127.0.0.1:54321       208    FJ-1-15   INFO: 7. tree was built in 00:00:00.070 (Wall: 22-Mar 18:59:41.313) 
+03-22 18:59:41.314 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:41.388 127.0.0.1:54321       208    FJ-1-15   INFO: 8. tree was built in 00:00:00.067 (Wall: 22-Mar 18:59:41.388) 
+03-22 18:59:41.389 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:41.512 127.0.0.1:54321       208    FJ-1-15   INFO: 9. tree was built in 00:00:00.115 (Wall: 22-Mar 18:59:41.512) 
+03-22 18:59:41.513 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:41.585 127.0.0.1:54321       208    FJ-1-15   INFO: 10. tree was built in 00:00:00.066 (Wall: 22-Mar 18:59:41.585) 
+03-22 18:59:41.586 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:41.663 127.0.0.1:54321       208    FJ-1-15   INFO: 11. tree was built in 00:00:00.071 (Wall: 22-Mar 18:59:41.663) 
+03-22 18:59:41.664 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:41.735 127.0.0.1:54321       208    FJ-1-15   INFO: 12. tree was built in 00:00:00.065 (Wall: 22-Mar 18:59:41.735) 
+03-22 18:59:41.736 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:41.798 127.0.0.1:54321       208    FJ-1-15   INFO: 13. tree was built in 00:00:00.060 (Wall: 22-Mar 18:59:41.798) 
+03-22 18:59:41.799 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:41.868 127.0.0.1:54321       208    FJ-1-15   INFO: 14. tree was built in 00:00:00.065 (Wall: 22-Mar 18:59:41.868) 
+03-22 18:59:41.869 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:41.946 127.0.0.1:54321       208    FJ-1-15   INFO: 15. tree was built in 00:00:00.072 (Wall: 22-Mar 18:59:41.945) 
+03-22 18:59:41.946 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:42.020 127.0.0.1:54321       208    FJ-1-15   INFO: 16. tree was built in 00:00:00.071 (Wall: 22-Mar 18:59:42.020) 
+03-22 18:59:42.021 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:42.098 127.0.0.1:54321       208    FJ-1-15   INFO: 17. tree was built in 00:00:00.073 (Wall: 22-Mar 18:59:42.098) 
+03-22 18:59:42.099 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:42.170 127.0.0.1:54321       208    FJ-1-15   INFO: 18. tree was built in 00:00:00.066 (Wall: 22-Mar 18:59:42.170) 
+03-22 18:59:42.172 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:42.238 127.0.0.1:54321       208    FJ-1-15   INFO: 19. tree was built in 00:00:00.062 (Wall: 22-Mar 18:59:42.238) 
+03-22 18:59:42.239 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:42.322 127.0.0.1:54321       208    FJ-1-15   INFO: 20. tree was built in 00:00:00.073 (Wall: 22-Mar 18:59:42.322) 
+03-22 18:59:42.323 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:42.392 127.0.0.1:54321       208    FJ-1-15   INFO: 21. tree was built in 00:00:00.066 (Wall: 22-Mar 18:59:42.392) 
+03-22 18:59:42.394 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:42.458 127.0.0.1:54321       208    FJ-1-15   INFO: 22. tree was built in 00:00:00.061 (Wall: 22-Mar 18:59:42.458) 
+03-22 18:59:42.459 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:42.528 127.0.0.1:54321       208    FJ-1-15   INFO: 23. tree was built in 00:00:00.066 (Wall: 22-Mar 18:59:42.528) 
+03-22 18:59:42.529 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:42.594 127.0.0.1:54321       208    FJ-1-15   INFO: 24. tree was built in 00:00:00.062 (Wall: 22-Mar 18:59:42.594) 
+03-22 18:59:42.595 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:42.659 127.0.0.1:54321       208    FJ-1-15   INFO: 25. tree was built in 00:00:00.060 (Wall: 22-Mar 18:59:42.659) 
+03-22 18:59:42.660 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:42.725 127.0.0.1:54321       208    FJ-1-15   INFO: 26. tree was built in 00:00:00.061 (Wall: 22-Mar 18:59:42.724) 
+03-22 18:59:42.726 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:42.804 127.0.0.1:54321       208    FJ-1-15   INFO: 27. tree was built in 00:00:00.074 (Wall: 22-Mar 18:59:42.803) 
+03-22 18:59:42.804 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:42.869 127.0.0.1:54321       208    FJ-1-15   INFO: 28. tree was built in 00:00:00.061 (Wall: 22-Mar 18:59:42.869) 
+03-22 18:59:42.870 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:42.941 127.0.0.1:54321       208    FJ-1-15   INFO: 29. tree was built in 00:00:00.068 (Wall: 22-Mar 18:59:42.941) 
+03-22 18:59:42.942 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:43.023 127.0.0.1:54321       208    FJ-1-15   INFO: 30. tree was built in 00:00:00.076 (Wall: 22-Mar 18:59:43.022) 
+03-22 18:59:43.023 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:43.089 127.0.0.1:54321       208    FJ-1-15   INFO: 31. tree was built in 00:00:00.061 (Wall: 22-Mar 18:59:43.088) 
+03-22 18:59:43.089 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:43.156 127.0.0.1:54321       208    FJ-1-15   INFO: 32. tree was built in 00:00:00.063 (Wall: 22-Mar 18:59:43.156) 
+03-22 18:59:43.157 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:43.225 127.0.0.1:54321       208    FJ-1-15   INFO: 33. tree was built in 00:00:00.064 (Wall: 22-Mar 18:59:43.224) 
+03-22 18:59:43.225 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:43.299 127.0.0.1:54321       208    FJ-1-15   INFO: 34. tree was built in 00:00:00.070 (Wall: 22-Mar 18:59:43.299) 
+03-22 18:59:43.300 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:43.368 127.0.0.1:54321       208    FJ-1-15   INFO: 35. tree was built in 00:00:00.065 (Wall: 22-Mar 18:59:43.368) 
+03-22 18:59:43.369 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:43.434 127.0.0.1:54321       208    FJ-1-15   INFO: 36. tree was built in 00:00:00.062 (Wall: 22-Mar 18:59:43.434) 
+03-22 18:59:43.435 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:43.498 127.0.0.1:54321       208    FJ-1-15   INFO: 37. tree was built in 00:00:00.060 (Wall: 22-Mar 18:59:43.498) 
+03-22 18:59:43.500 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:43.575 127.0.0.1:54321       208    FJ-1-15   INFO: 38. tree was built in 00:00:00.071 (Wall: 22-Mar 18:59:43.575) 
+03-22 18:59:43.576 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:43.639 127.0.0.1:54321       208    FJ-1-15   INFO: 39. tree was built in 00:00:00.060 (Wall: 22-Mar 18:59:43.639) 
+03-22 18:59:43.639 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:43.711 127.0.0.1:54321       208    FJ-1-15   INFO: 40. tree was built in 00:00:00.063 (Wall: 22-Mar 18:59:43.711) 
+03-22 18:59:43.782 127.0.0.1:54321       208    FJ-1-15   INFO: 41. tree was built in 00:00:00.071 (Wall: 22-Mar 18:59:43.782) 
+03-22 18:59:43.844 127.0.0.1:54321       208    FJ-1-15   INFO: 42. tree was built in 00:00:00.062 (Wall: 22-Mar 18:59:43.844) 
+03-22 18:59:43.907 127.0.0.1:54321       208    FJ-1-15   INFO: 43. tree was built in 00:00:00.063 (Wall: 22-Mar 18:59:43.907) 
+03-22 18:59:43.971 127.0.0.1:54321       208    FJ-1-15   INFO: 44. tree was built in 00:00:00.064 (Wall: 22-Mar 18:59:43.971) 
+03-22 18:59:44.036 127.0.0.1:54321       208    FJ-1-15   INFO: 45. tree was built in 00:00:00.065 (Wall: 22-Mar 18:59:44.036) 
+03-22 18:59:44.117 127.0.0.1:54321       208    FJ-1-15   INFO: 46. tree was built in 00:00:00.080 (Wall: 22-Mar 18:59:44.116) 
+03-22 18:59:44.181 127.0.0.1:54321       208    FJ-1-15   INFO: 47. tree was built in 00:00:00.063 (Wall: 22-Mar 18:59:44.180) 
+03-22 18:59:44.260 127.0.0.1:54321       208    FJ-1-15   INFO: 48. tree was built in 00:00:00.078 (Wall: 22-Mar 18:59:44.259) 
+03-22 18:59:44.320 127.0.0.1:54321       208    FJ-1-15   INFO: 49. tree was built in 00:00:00.060 (Wall: 22-Mar 18:59:44.320) 
+03-22 18:59:44.380 127.0.0.1:54321       208    FJ-1-15   INFO: 50. tree was built in 00:00:00.060 (Wall: 22-Mar 18:59:44.380) 
+03-22 18:59:44.381 127.0.0.1:54321       208    FJ-1-15   INFO: ============================================================== 
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO: Model Metrics Type: Multinomial
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  Description: N/A
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  model id: GBM_model_R_1553273956577_1
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  frame id: RTMP_sid_a2d8_1
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  MSE: 0.11886133
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  RMSE: 0.3447627
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  logloss: 0.38045982
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  mean_per_class_error: 0.12566137
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  hit ratios: [0.8743386, 0.97896826, 0.9976852, 0.99953705, 1.0, 1.0, 1.0]
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:               cover_type_1  cover_type_2  cover_type_3  cover_type_4  cover_type_5  cover_type_6  cover_type_7   Error            Rate
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO: cover_type_1          1762           225             1             0            49             5           118  0.1843     398 / 2,160
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO: cover_type_2           345          1472            50             0           221            56            16  0.3185     688 / 2,160
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO: cover_type_3             0             3          1796            79            26           256             0  0.1685     364 / 2,160
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO: cover_type_4             0             0            13          2125             0            22             0  0.0162      35 / 2,160
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO: cover_type_5             0            52            37             0          2046            25             0  0.0528     114 / 2,160
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO: cover_type_6             0             9           188            42            24          1897             0  0.1218     263 / 2,160
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO: cover_type_7            38             0             0             0             0             0          2122  0.0176      38 / 2,160
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:       Totals          2145          1761          2085          2246          2366          2261          2256  0.1257  1,900 / 15,120
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO: Variable Importances:
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                           Variable Relative Importance Scaled Importance Percentage
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                          Elevation        21163.453125          1.000000   0.524872
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:    Horizontal_Distance_To_Roadways         2539.774170          0.120008   0.062989
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:   Horizontal_Distance_To_Hydrology         2086.010986          0.098567   0.051735
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO: Horizontal_Distance_To_Fire_Points         2057.728271          0.097230   0.051033
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                      Hillshade_9am         1952.540283          0.092260   0.048425
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                        Soil_Type10         1674.779907          0.079135   0.041536
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                        Soil_Type30          949.684875          0.044874   0.023553
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:     Vertical_Distance_To_Hydrology          811.223267          0.038331   0.020119
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                     Hillshade_Noon          644.576660          0.030457   0.015986
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                        Soil_Type13          641.191101          0.030297   0.015902
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO: ---
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                        Soil_Type34            6.060523          0.000286   0.000150
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                        Soil_Type27            4.686784          0.000221   0.000116
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                        Soil_Type14            3.028410          0.000143   0.000075
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                         Soil_Type9            2.654090          0.000125   0.000066
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                        Soil_Type26            2.223631          0.000105   0.000055
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                        Soil_Type36            1.439394          0.000068   0.000036
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                         Soil_Type8            0.000000          0.000000   0.000000
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                        Soil_Type25            0.000000          0.000000   0.000000
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                        Soil_Type28            0.000000          0.000000   0.000000
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:                        Soil_Type37            0.000000          0.000000   0.000000
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO: Model Summary:
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  Number of Trees Number of Internal Trees Model Size in Bytes Min. Depth Max. Depth Mean Depth Min. Leaves Max. Leaves Mean Leaves
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:               50                      350              132044          5          5    5.00000          10          32    25.32000
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO: Scoring History:
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:            Timestamp   Duration Number of Trees Training RMSE Training LogLoss Training Classification Error
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:39  0.225 sec               0       0.85714          1.94591                       0.85952
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:40  1.076 sec               1       0.80579          1.65138                       0.28062
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:40  1.349 sec               2       0.76258          1.46371                       0.27090
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:40  1.496 sec               3       0.72257          1.31633                       0.25159
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:41  1.666 sec               4       0.68742          1.20266                       0.24881
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:41  1.787 sec               5       0.65663          1.11086                       0.24577
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:41  1.887 sec               6       0.62890          1.03365                       0.24041
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:41  1.967 sec               7       0.60477          0.96968                       0.23763
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:41  2.042 sec               8       0.58277          0.91359                       0.23214
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:41  2.166 sec               9       0.56325          0.86477                       0.22765
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO: ---
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:43  3.742 sec              31       0.39152          0.47242                       0.16197
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:43  3.810 sec              32       0.38820          0.46569                       0.16005
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:43  3.878 sec              33       0.38511          0.45956                       0.15847
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:43  3.953 sec              34       0.38188          0.45300                       0.15556
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:43  4.022 sec              35       0.37922          0.44761                       0.15417
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:43  4.088 sec              36       0.37619          0.44159                       0.15033
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:43  4.152 sec              37       0.37368          0.43646                       0.14841
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:43  4.229 sec              38       0.37056          0.43050                       0.14563
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:43  4.292 sec              39       0.36814          0.42561                       0.14306
+03-22 18:59:44.386 127.0.0.1:54321       208    FJ-1-15   INFO:  2019-03-22 18:59:44  5.034 sec              50       0.34476          0.38046                       0.12566
+03-22 18:59:44.568 127.0.0.1:54321       208    #9608-328 INFO: GET /3/Models/GBM_model_R_1553273956577_1, parms: {}
+03-22 18:59:55.617 127.0.0.1:54321       208    #9608-327 INFO: GET /3/ModelBuilders/deeplearning, parms: {}
+03-22 18:59:55.689 127.0.0.1:54321       208    #9608-324 INFO: POST /3/ModelBuilders/deeplearning, parms: {training_frame=RTMP_sid_a2d8_1, response_column=Cover_Type, ignored_columns=[""]}
+03-22 18:59:55.737 127.0.0.1:54321       208    #9608-324 WARN: _train: Dropping bad and constant columns: [Soil_Type7, Soil_Type15]
+03-22 18:59:55.751 127.0.0.1:54321       208    FJ-1-11   INFO: Building H2O DeepLearning model with these parameters:
+03-22 18:59:55.766 127.0.0.1:54321       208    FJ-1-11   INFO: {"_train":{"name":"RTMP_sid_a2d8_1","type":"Key"},"_valid":null,"_nfolds":0,"_keep_cross_validation_models":true,"_keep_cross_validation_predictions":false,"_keep_cross_validation_fold_assignment":false,"_parallelize_cross_validation":true,"_auto_rebalance":true,"_seed":-1,"_fold_assignment":"AUTO","_categorical_encoding":"AUTO","_max_categorical_levels":10,"_distribution":"AUTO","_tweedie_power":1.5,"_quantile_alpha":0.5,"_huber_alpha":0.9,"_ignored_columns":[""],"_ignore_const_cols":true,"_weights_column":null,"_offset_column":null,"_fold_column":null,"_is_cv_model":false,"_score_each_iteration":false,"_max_runtime_secs":0.0,"_stopping_rounds":5,"_stopping_metric":"AUTO","_stopping_tolerance":0.0,"_response_column":"Cover_Type","_balance_classes":false,"_max_after_balance_size":5.0,"_class_sampling_factors":null,"_max_confusion_matrix_size":20,"_checkpoint":null,"_pretrained_autoencoder":null,"_custom_metric_func":null,"_overwrite_with_best_model":true,"_autoencoder":false,"_use_all_factor_levels":true,"_standardize":true,"_activation":"Rectifier","_hidden":[200,200],"_epochs":10.0,"_train_samples_per_iteration":-2,"_target_ratio_comm_to_comp":0.05,"_adaptive_rate":true,"_rho":0.99,"_epsilon":1.0E-8,"_rate":0.005,"_rate_annealing":1.0E-6,"_rate_decay":1.0,"_momentum_start":0.0,"_momentum_ramp":1000000.0,"_momentum_stable":0.0,"_nesterov_accelerated_gradient":true,"_input_dropout_ratio":0.0,"_hidden_dropout_ratios":null,"_l1":0.0,"_l2":0.0,"_max_w2":3.4028235E38,"_initial_weight_distribution":"UniformAdaptive","_initial_weight_scale":1.0,"_initial_weights":null,"_initial_biases":null,"_loss":"Automatic","_score_interval":5.0,"_score_training_samples":10000,"_score_validation_samples":0,"_score_duty_cycle":0.1,"_classification_stop":0.0,"_regression_stop":1.0E-6,"_quiet_mode":false,"_score_validation_sampling":"Uniform","_diagnostics":true,"_variable_importances":true,"_fast_mode":true,"_force_load_balance":true,"_replicate_training_data":true,"_single_node_mode":false,"_shuffle_training_data":false,"_missing_values_handling":"MeanImputation","_sparse":false,"_col_major":false,"_average_activation":0.0,"_sparsity_beta":0.0,"_max_categorical_features":2147483647,"_reproducible":false,"_export_weights_and_biases":false,"_elastic_averaging":false,"_elastic_averaging_moving_rate":0.9,"_elastic_averaging_regularization":0.001,"_mini_batch_size":1}
+03-22 18:59:55.766 127.0.0.1:54321       208    FJ-1-11   INFO: Dropping ignored columns: []
+03-22 18:59:55.767 127.0.0.1:54321       208    FJ-1-11   INFO: Rebalancing train dataset into 56 chunks.
+03-22 18:59:55.994 127.0.0.1:54321       208    FJ-1-11   INFO: Building the model on 52 numeric features and 0 (one-hot encoded) categorical features.
+03-22 18:59:55.997 127.0.0.1:54321       208    FJ-1-11   INFO: _replicate_training_data: Disabling replicate_training_data on 1 node.
+03-22 18:59:55.997 127.0.0.1:54321       208    FJ-1-11   INFO: _categorical_encoding: Automatically enabling OneHotInternal categorical encoding.
+03-22 18:59:55.997 127.0.0.1:54321       208    FJ-1-11   INFO: _adaptive_rate: Using automatic learning rate. Ignoring the following input parameters: rate, rate_decay, rate_annealing, momentum_start, momentum_ramp, momentum_stable.
+03-22 18:59:56.047 127.0.0.1:54321       208    FJ-1-11   INFO: Created random initial model state.
+03-22 18:59:56.047 127.0.0.1:54321       208    FJ-1-11   INFO: Model category: Classification
+03-22 18:59:56.048 127.0.0.1:54321       208    FJ-1-11   INFO: Number of model parameters (weights/biases): 52,207
+03-22 18:59:56.050 127.0.0.1:54321       208    FJ-1-11   INFO: One epoch corresponds to 15120 training data rows.
+03-22 18:59:56.156 127.0.0.1:54321       208    FJ-1-11   INFO: Number of chunks of the training data: 56
+03-22 18:59:56.170 127.0.0.1:54321       208    FJ-1-11   INFO: Auto-tuning parameter 'train_samples_per_iteration':
+03-22 18:59:56.171 127.0.0.1:54321       208    FJ-1-11   INFO: Estimated compute power : 27 GFlops
+03-22 18:59:56.171 127.0.0.1:54321       208    FJ-1-11   INFO: Estimated time for comm :  10.047 msec
+03-22 18:59:56.171 127.0.0.1:54321       208    FJ-1-11   INFO: Estimated time per row  :   8 usec
+03-22 18:59:56.171 127.0.0.1:54321       208    FJ-1-11   INFO: Estimated training speed: 122318 rows/sec
+03-22 18:59:56.171 127.0.0.1:54321       208    FJ-1-11   INFO: Setting train_samples_per_iteration (-2) to auto-tuned value: 15120
+03-22 18:59:56.173 127.0.0.1:54321       208    FJ-1-11   INFO: Total setup time:  0.420 sec
+03-22 18:59:56.173 127.0.0.1:54321       208    FJ-1-11   INFO: Starting to train the Deep Learning model.
+03-22 18:59:57.593 127.0.0.1:54321       208    FJ-1-11   INFO: Scoring the model.
+03-22 18:59:57.619 127.0.0.1:54321       208    FJ-1-11   INFO: Status of Neuron Layers (predicting Cover_Type, 7-class classification, multinomial distribution, CrossEntropy loss, 52,207 weights/biases, 623.4 KB, 15,120 training samples, mini-batch size 1):
+03-22 18:59:57.619 127.0.0.1:54321       208    FJ-1-11   INFO:  Layer Units      Type Dropout       L1       L2 Mean Rate Rate RMS Momentum Mean Weight Weight RMS Mean Bias Bias RMS
+03-22 18:59:57.619 127.0.0.1:54321       208    FJ-1-11   INFO:      1    52     Input  0.00 %                                                                                        
+03-22 18:59:57.619 127.0.0.1:54321       208    FJ-1-11   INFO:      2   200 Rectifier       0 0.000000 0.000000  0.026416 0.073808 0.000000    0.024787   0.093367  0.425997 0.030836
+03-22 18:59:57.619 127.0.0.1:54321       208    FJ-1-11   INFO:      3   200 Rectifier       0 0.000000 0.000000  0.002412 0.001326 0.000000   -0.011655   0.071733  0.972582 0.018794
+03-22 18:59:57.619 127.0.0.1:54321       208    FJ-1-11   INFO:      4     7   Softmax         0.000000 0.000000  0.012678 0.081767 0.000000    0.003495   0.388116 -0.010198 0.002237
+03-22 18:59:57.810 127.0.0.1:54321       208    FJ-1-11   INFO: Computing variable importances.
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO: Model Metrics Type: Multinomial
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:  Description: Metrics reported on temporary training frame with 9944 samples
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:  model id: DeepLearning_model_R_1553273956577_2
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:  frame id: RTMP_sid_a2d8_1.temporary.sample.66.14%
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:  MSE: 0.32049704
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:  RMSE: 0.56612456
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:  logloss: 1.2345595
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:  mean_per_class_error: 0.37922737
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:  hit ratios: [0.6184634, 0.8534795, 0.965004, 0.99286, 0.9982904, 0.9997989, 1.0]
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:               cover_type_1  cover_type_2  cover_type_3  cover_type_4  cover_type_5  cover_type_6  cover_type_7   Error           Rate
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_1           472           820             4             0            14             5           135  0.6745    978 / 1,450
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_2            85          1138            37             5           117            18            15  0.1958    277 / 1,415
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_3             0            11           935           295            97            49             0  0.3259    452 / 1,387
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_4             0             0            31          1372             0             9             0  0.0283     40 / 1,412
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_5            54           548            43             0           748            30             0  0.4743    675 / 1,423
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_6             0           113           694           246            52           335             0  0.7674  1,105 / 1,440
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_7           182            79             0             0             6             0          1150  0.1884    267 / 1,417
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:       Totals           793          2709          1744          1918          1034           446          1300  0.3815  3,794 / 9,944
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO: Variable Importances:
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                         Variable Relative Importance Scaled Importance Percentage
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                        Elevation            1.000000          1.000000   0.033102
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                       Soil_Type9            0.767250          0.767250   0.025398
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                       Soil_Type8            0.761244          0.761244   0.025199
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                      Soil_Type18            0.741020          0.741020   0.024530
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:  Horizontal_Distance_To_Roadways            0.705052          0.705052   0.023339
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                      Soil_Type37            0.697205          0.697205   0.023079
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                      Soil_Type25            0.675597          0.675597   0.022364
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                      Soil_Type12            0.663828          0.663828   0.021974
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                      Soil_Type21            0.660921          0.660921   0.021878
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                      Soil_Type36            0.649380          0.649380   0.021496
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO: ---
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                       Soil_Type6            0.521077          0.521077   0.017249
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                      Soil_Type33            0.520671          0.520671   0.017235
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                      Soil_Type22            0.520319          0.520319   0.017224
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                       Soil_Type1            0.510912          0.510912   0.016912
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                      Soil_Type32            0.492363          0.492363   0.016298
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                      Soil_Type11            0.461240          0.461240   0.015268
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                       Soil_Type5            0.455584          0.455584   0.015081
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                      Soil_Type20            0.440226          0.440226   0.014573
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                      Soil_Type16            0.436313          0.436313   0.014443
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:                      Soil_Type14            0.402813          0.402813   0.013334
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO: Status of Neuron Layers (predicting Cover_Type, 7-class classification, multinomial distribution, CrossEntropy loss, 52,207 weights/biases, 626.2 KB, 15,120 training samples, mini-batch size 1):
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:  Layer Units      Type Dropout       L1       L2 Mean Rate Rate RMS Momentum Mean Weight Weight RMS Mean Bias Bias RMS
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:      1    52     Input  0.00 %                                                                                        
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:      2   200 Rectifier       0 0.000000 0.000000  0.026416 0.073808 0.000000    0.024787   0.093367  0.425997 0.030836
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:      3   200 Rectifier       0 0.000000 0.000000  0.002412 0.001326 0.000000   -0.011655   0.071733  0.972582 0.018794
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:      4     7   Softmax         0.000000 0.000000  0.012678 0.081767 0.000000    0.003495   0.388116 -0.010198 0.002237
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO: Scoring History:
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:            Timestamp   Duration Training Speed  Epochs Iterations      Samples Training RMSE Training LogLoss Training r2 Training Classification Error
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:  2019-03-22 18:59:56  0.000 sec                0.00000          0     0.000000           NaN              NaN         NaN                           NaN
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO:  2019-03-22 18:59:57  2.112 sec  10800 obs/sec 1.00000          1 15120.000000       0.56612          1.23456     0.92039                       0.38154
+03-22 18:59:57.889 127.0.0.1:54321       208    FJ-1-11   INFO: Time taken for scoring and diagnostics:  0.293 sec
+03-22 18:59:57.890 127.0.0.1:54321       208    FJ-1-11   INFO: Training time:  2.138 sec (scoring:  0.293 sec). Processed 15,120 samples (1.000 epochs).
+03-22 18:59:57.890 127.0.0.1:54321       208    FJ-1-11   INFO: Iterations: 1. Epochs: 1.00000. Speed: 10,610 samples/sec.
+03-22 19:00:02.907 127.0.0.1:54321       208    FJ-1-11   INFO: Scoring the model.
+03-22 19:00:02.911 127.0.0.1:54321       208    FJ-1-11   INFO: Status of Neuron Layers (predicting Cover_Type, 7-class classification, multinomial distribution, CrossEntropy loss, 52,207 weights/biases, 626.2 KB, 105,840 training samples, mini-batch size 1):
+03-22 19:00:02.911 127.0.0.1:54321       208    FJ-1-11   INFO:  Layer Units      Type Dropout       L1       L2 Mean Rate Rate RMS Momentum Mean Weight Weight RMS Mean Bias Bias RMS
+03-22 19:00:02.911 127.0.0.1:54321       208    FJ-1-11   INFO:      1    52     Input  0.00 %                                                                                        
+03-22 19:00:02.911 127.0.0.1:54321       208    FJ-1-11   INFO:      2   200 Rectifier       0 0.000000 0.000000  0.025396 0.068414 0.000000    0.041164   0.118748  0.337734 0.060168
+03-22 19:00:02.911 127.0.0.1:54321       208    FJ-1-11   INFO:      3   200 Rectifier       0 0.000000 0.000000  0.003419 0.002058 0.000000   -0.019668   0.079542  0.939148 0.046096
+03-22 19:00:02.911 127.0.0.1:54321       208    FJ-1-11   INFO:      4     7   Softmax         0.000000 0.000000  0.042938 0.166057 0.000000   -0.032243   0.400534 -0.062316 0.039498
+03-22 19:00:02.996 127.0.0.1:54321       208    FJ-1-11   INFO: Computing variable importances.
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: Model Metrics Type: Multinomial
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:  Description: Metrics reported on temporary training frame with 9944 samples
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:  model id: DeepLearning_model_R_1553273956577_2
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:  frame id: RTMP_sid_a2d8_1.temporary.sample.66.14%
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:  MSE: 0.17644425
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:  RMSE: 0.42005268
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:  logloss: 0.56127
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:  mean_per_class_error: 0.22955611
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:  hit ratios: [0.7704143, 0.95303696, 0.99456954, 0.999296, 0.9996983, 1.0, 1.0]
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:               cover_type_1  cover_type_2  cover_type_3  cover_type_4  cover_type_5  cover_type_6  cover_type_7   Error           Rate
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_1          1162           205             1             0            30             8            44  0.1986    288 / 1,450
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_2           344           855            18             0           169            23             6  0.3958    560 / 1,415
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_3             0             8           975           157            93           154             0  0.2970    412 / 1,387
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_4             0             0            33          1356             0            23             0  0.0397     56 / 1,412
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_5            79           133            10             0          1191            10             0  0.1630    232 / 1,423
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_6             1            17           359            93            56           914             0  0.3653    526 / 1,440
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_7           208             1             0             0             0             0          1208  0.1475    209 / 1,417
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:       Totals          1794          1219          1396          1606          1539          1132          1258  0.2296  2,283 / 9,944
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: Variable Importances:
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                           Variable Relative Importance Scaled Importance Percentage
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                          Elevation            1.000000          1.000000   0.045041
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                         Soil_Type8            0.757757          0.757757   0.034130
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type37            0.721048          0.721048   0.032477
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:    Horizontal_Distance_To_Roadways            0.696815          0.696815   0.031385
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type25            0.695225          0.695225   0.031314
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                         Soil_Type9            0.668726          0.668726   0.030120
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type18            0.661144          0.661144   0.029779
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: Horizontal_Distance_To_Fire_Points            0.633458          0.633458   0.028532
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type28            0.581292          0.581292   0.026182
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type21            0.548650          0.548650   0.024712
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: ---
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type32            0.295304          0.295304   0.013301
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type24            0.294819          0.294819   0.013279
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                         Soil_Type5            0.282218          0.282218   0.012711
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                         Soil_Type2            0.280328          0.280328   0.012626
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type11            0.271666          0.271666   0.012236
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                         Soil_Type1            0.267753          0.267753   0.012060
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                         Soil_Type6            0.261877          0.261877   0.011795
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type20            0.244029          0.244029   0.010991
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type16            0.226020          0.226020   0.010180
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type14            0.216157          0.216157   0.009736
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: Status of Neuron Layers (predicting Cover_Type, 7-class classification, multinomial distribution, CrossEntropy loss, 52,207 weights/biases, 626.2 KB, 105,840 training samples, mini-batch size 1):
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:  Layer Units      Type Dropout       L1       L2 Mean Rate Rate RMS Momentum Mean Weight Weight RMS Mean Bias Bias RMS
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:      1    52     Input  0.00 %                                                                                        
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:      2   200 Rectifier       0 0.000000 0.000000  0.025396 0.068414 0.000000    0.041164   0.118748  0.337734 0.060168
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:      3   200 Rectifier       0 0.000000 0.000000  0.003419 0.002058 0.000000   -0.019668   0.079542  0.939148 0.046096
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:      4     7   Softmax         0.000000 0.000000  0.042938 0.166057 0.000000   -0.032243   0.400534 -0.062316 0.039498
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: Scoring History:
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:            Timestamp   Duration Training Speed  Epochs Iterations       Samples Training RMSE Training LogLoss Training r2 Training Classification Error
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:  2019-03-22 18:59:56  0.000 sec                0.00000          0      0.000000           NaN              NaN         NaN                           NaN
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:  2019-03-22 18:59:57  2.112 sec  10800 obs/sec 1.00000          1  15120.000000       0.56612          1.23456     0.92039                       0.38154
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO:  2019-03-22 19:00:02  7.255 sec  16429 obs/sec 7.00000          7 105840.000000       0.42005          0.56127     0.95617                       0.22959
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: Time taken for scoring and diagnostics:  0.101 sec
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: Training time:  7.267 sec (scoring:  0.394 sec). Processed 105,840 samples (7.000 epochs).
+03-22 19:00:03.018 127.0.0.1:54321       208    FJ-1-11   INFO: Iterations: 7. Epochs: 7.00000. Speed: 16,401 samples/sec. Estimated time left:  4.844 sec
+03-22 19:00:05.140 127.0.0.1:54321       208    FJ-1-11   INFO: Scoring the model.
+03-22 19:00:05.143 127.0.0.1:54321       208    FJ-1-11   INFO: Status of Neuron Layers (predicting Cover_Type, 7-class classification, multinomial distribution, CrossEntropy loss, 52,207 weights/biases, 626.2 KB, 151,200 training samples, mini-batch size 1):
+03-22 19:00:05.143 127.0.0.1:54321       208    FJ-1-11   INFO:  Layer Units      Type Dropout       L1       L2 Mean Rate Rate RMS Momentum Mean Weight Weight RMS Mean Bias Bias RMS
+03-22 19:00:05.143 127.0.0.1:54321       208    FJ-1-11   INFO:      1    52     Input  0.00 %                                                                                        
+03-22 19:00:05.143 127.0.0.1:54321       208    FJ-1-11   INFO:      2   200 Rectifier       0 0.000000 0.000000  0.027060 0.069697 0.000000    0.040844   0.130763  0.321504 0.073590
+03-22 19:00:05.143 127.0.0.1:54321       208    FJ-1-11   INFO:      3   200 Rectifier       0 0.000000 0.000000  0.003392 0.002095 0.000000   -0.020878   0.083802  0.932026 0.055408
+03-22 19:00:05.143 127.0.0.1:54321       208    FJ-1-11   INFO:      4     7   Softmax         0.000000 0.000000  0.049566 0.188187 0.000000   -0.045097   0.411452 -0.078551 0.059283
+03-22 19:00:05.221 127.0.0.1:54321       208    FJ-1-11   INFO: Computing variable importances.
+03-22 19:00:05.238 127.0.0.1:54321       208    FJ-1-11   INFO: Time taken for scoring and diagnostics:  0.091 sec
+03-22 19:00:05.239 127.0.0.1:54321       208    FJ-1-11   INFO: Training time:  9.487 sec (scoring:  0.485 sec). Processed 151,200 samples (10.000 epochs).
+03-22 19:00:05.239 127.0.0.1:54321       208    FJ-1-11   INFO: Iterations: 10. Epochs: 10.0000. Speed: 17,618 samples/sec. Estimated time left:  1.054 sec
+03-22 19:00:05.240 127.0.0.1:54321       208    FJ-1-11   INFO: ==============================================================================================================================================================================
+03-22 19:00:05.240 127.0.0.1:54321       208    FJ-1-11   INFO: Finished training the Deep Learning model.
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO: Model Metrics Type: Multinomial
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:  Description: Metrics reported on temporary training frame with 9944 samples
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:  model id: DeepLearning_model_R_1553273956577_2
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:  frame id: RTMP_sid_a2d8_1.temporary.sample.66.14%
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:  MSE: 0.16080198
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:  RMSE: 0.40100121
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:  logloss: 0.50854415
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:  mean_per_class_error: 0.20935203
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:  hit ratios: [0.79102975, 0.9572606, 0.9955752, 0.99939656, 0.99999994, 0.99999994, 0.99999994]
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:               cover_type_1  cover_type_2  cover_type_3  cover_type_4  cover_type_5  cover_type_6  cover_type_7   Error           Rate
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_1          1258           145             1             0            14             3            29  0.1324    192 / 1,450
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_2           420           845            16             0           114            15             5  0.4028    570 / 1,415
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_3             0            27           957           136            74           193             0  0.3100    430 / 1,387
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_4             0             0            29          1361             0            22             0  0.0361     51 / 1,412
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_5            77           136            11             0          1194             5             0  0.1609    229 / 1,423
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_6            10            40           242            67            41          1040             0  0.2778    400 / 1,440
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO: cover_type_7           200             6             0             0             0             0          1211  0.1454    206 / 1,417
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:       Totals          1965          1199          1256          1564          1437          1278          1245  0.2090  2,078 / 9,944
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO: Variable Importances:
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                           Variable Relative Importance Scaled Importance Percentage
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                          Elevation            1.000000          1.000000   0.045453
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:    Horizontal_Distance_To_Roadways            0.753576          0.753576   0.034252
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                         Soil_Type8            0.750270          0.750270   0.034102
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type37            0.711210          0.711210   0.032327
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type25            0.684925          0.684925   0.031132
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO: Horizontal_Distance_To_Fire_Points            0.682069          0.682069   0.031002
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type18            0.657953          0.657953   0.029906
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                         Soil_Type9            0.646721          0.646721   0.029395
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type28            0.570893          0.570893   0.025949
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:   Horizontal_Distance_To_Hydrology            0.562336          0.562336   0.025560
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO: ---
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type31            0.295164          0.295164   0.013416
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type24            0.275832          0.275832   0.012537
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                         Soil_Type5            0.268440          0.268440   0.012201
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                         Soil_Type2            0.268292          0.268292   0.012195
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type11            0.266465          0.266465   0.012112
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                         Soil_Type1            0.257605          0.257605   0.011709
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                         Soil_Type6            0.254538          0.254538   0.011570
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type20            0.237061          0.237061   0.010775
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type16            0.216345          0.216345   0.009834
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:                        Soil_Type14            0.203151          0.203151   0.009234
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO: Status of Neuron Layers (predicting Cover_Type, 7-class classification, multinomial distribution, CrossEntropy loss, 52,207 weights/biases, 626.2 KB, 151,200 training samples, mini-batch size 1):
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:  Layer Units      Type Dropout       L1       L2 Mean Rate Rate RMS Momentum Mean Weight Weight RMS Mean Bias Bias RMS
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:      1    52     Input  0.00 %                                                                                        
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:      2   200 Rectifier       0 0.000000 0.000000  0.027060 0.069697 0.000000    0.040844   0.130763  0.321504 0.073590
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:      3   200 Rectifier       0 0.000000 0.000000  0.003392 0.002095 0.000000   -0.020878   0.083802  0.932026 0.055408
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:      4     7   Softmax         0.000000 0.000000  0.049566 0.188187 0.000000   -0.045097   0.411452 -0.078551 0.059283
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO: Scoring History:
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:            Timestamp   Duration Training Speed   Epochs Iterations       Samples Training RMSE Training LogLoss Training r2 Training Classification Error
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:  2019-03-22 18:59:56  0.000 sec                 0.00000          0      0.000000           NaN              NaN         NaN                           NaN
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:  2019-03-22 18:59:57  2.112 sec  10800 obs/sec  1.00000          1  15120.000000       0.56612          1.23456     0.92039                       0.38154
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:  2019-03-22 19:00:02  7.255 sec  16429 obs/sec  7.00000          7 105840.000000       0.42005          0.56127     0.95617                       0.22959
+03-22 19:00:05.242 127.0.0.1:54321       208    FJ-1-11   INFO:  2019-03-22 19:00:05  9.479 sec  17632 obs/sec 10.00000         10 151200.000000       0.40100          0.50854     0.96006                       0.20897
+03-22 19:00:05.243 127.0.0.1:54321       208    FJ-1-11   INFO: ==============================================================================================================================================================================
+03-22 19:00:06.068 127.0.0.1:54321       208    #9608-322 INFO: GET /3/Models/DeepLearning_model_R_1553273956577_2, parms: {}
