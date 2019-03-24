@@ -1,0 +1,16 @@
+---
+title: "Check data"
+output: html_notebook
+---
+
+## Single entity story
+
+Describe the entity you are interested in and follow it through your various data sources
+
+## Write or collect your data dictionary
+
+The data dictionary is stored in `references`
+
+## Check NA's
+
+## Basic visualizations

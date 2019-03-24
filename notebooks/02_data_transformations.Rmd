@@ -1,0 +1,33 @@
+---
+title: "03_data_transformations"
+output: html_notebook
+---
+
+## Dealing with NA's
+
+## Data transformations
+
+I recommend using the recipes package in R
+
+- normalizing  
+- one hot encoding  
+- discretizing  
+- creating time series features  
+
+## Create class/function or script to do the transformations on raw data
+
+The data pipeline must be applied to the raw data such that the raw data remains unchanged leading into the modelling stage. It should move seamlessly through the transformation pipeline into the modelling pipeline.
+
+Store your functions in `src` and transformed data in `interim` or `processed`
+
+## Data partitions
+
+Create your test, train and validation sets. They are stored in `processed`.
+
+Things to look out for;  
+
+- Never use validation data until you think you have decided on a candidate model using the test data  
+- Make sure your validation and test sets are not leaking information on the outcome. For example, when predicting future values no information should be leaked in the predictor variables or test/validation set  
+- Make sure nominal features are properly represented in your data sets and that you have accounted for all possible inputs that can be seen on live scoring  
+
+

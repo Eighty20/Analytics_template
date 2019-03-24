@@ -1,0 +1,12 @@
+---
+title: "03_modelling"
+output: html_notebook
+---
+
+## Clearly state your objectives and assumptions
+
+## Create baseline model and performance
+
+Before starting modelling in earnest it may be helpful to establish a baseline model to better judge signal in the data and measure the effort vs reward tradeoff of using more advanced models.
+
+I recommend using packages like OneR, simple linear model or decision tree
