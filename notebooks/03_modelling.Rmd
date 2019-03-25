@@ -9,6 +9,8 @@ We should confirm that the model input does make sense for what we are trying to
 
 When confirming our objectives we should confirm the ideal outcome. For example if we were doing a classification model on a binary outcome, are we interested in predicting the highest accuracy (yes and no) or do we want high sensitivity or specificity. Are we going to optimize over F1 error or is the chosen loss function appropriate for the current deep learning model.
 
+You will no doubt have to iterate the modelling and feature generation (data pipeline). Clearly keep track of things like highly correlated columns that are removed for modelling and the exact reason/model.
+
 ## Create baseline model/performance
 
 Before starting modelling in earnest it may be helpful to establish a baseline model to better judge signal in the data and measure the effort vs reward tradeoff of using more advanced models.
@@ -18,6 +20,10 @@ I recommend using packages like OneR, simple linear model or decision tree
 ## Measure performance on the baseline model and validate progression to the desired outcome
 
 ## Attempt more complicated models if required
+
+There is no clear guide to inform us when we should stop. Therefore progress should be clearly communicated to the stateholders in the project.
+
+If we understand 
 
 ## Store model and results on validation data
 
