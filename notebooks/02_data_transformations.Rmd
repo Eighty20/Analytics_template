@@ -37,3 +37,16 @@ The data pipeline must be applied to the raw data such that the raw data remains
 Store your functions in `src` and transformed data in `interim` or `processed`.
 
 If desirable you can store this functionality as a script, when run with arguments the required processing is performed and stored in the data folders.  
+
+## tests
+
+Unless we move into production strict unit testing is probably overkill. However, writing basic tests will help ensure that everything is operating as expected and will make building unit testing much easier.
+
+Consider tests that check that the raw data and that produced by the data pipeline agree where applicable.
+
+For example;  
+
+- Did we filter out rows?  
+- Do we have the same number of classes/dates?  
+- Does our totals match up, if not where?  
+
