@@ -3,23 +3,6 @@ title: "03_data_transformations"
 output: html_notebook
 ---
 
-## Dealing with NA's
-
-## Data transformations
-
-I recommend using the recipes package in R
-
-- normalizing  
-- one hot encoding  
-- discretizing  
-- creating time series features  
-
-## Create class/function or script to do the transformations on raw data
-
-The data pipeline must be applied to the raw data such that the raw data remains unchanged leading into the modelling stage. It should move seamlessly through the transformation pipeline into the modelling pipeline.
-
-Store your functions in `src` and transformed data in `interim` or `processed`
-
 ## Data partitions
 
 Create your test, train and validation sets. They are stored in `processed`.
@@ -30,4 +13,27 @@ Things to look out for;
 - Make sure your validation and test sets are not leaking information on the outcome. For example, when predicting future values no information should be leaked in the predictor variables or test/validation set  
 - Make sure nominal features are properly represented in your data sets and that you have accounted for all possible inputs that can be seen on live scoring  
 
+## Dealing with NA's
 
+It is common to exclude all NA data, especially when data is plentiful. This is fine as long you track what information is actually lost. Especially if this information is related to certain nominal or ordered features in the data.
+
+Also consider ways to deal with the NULL/NA data without loosing the row/column information.
+
+## Data transformations
+
+I recommend using the recipes package in R for your data steps:
+
+- normalizing  
+- one hot encoding  
+- discretizing  
+- creating time series features  
+
+Make sure that all learned steps are trained on only your training data. For example if you were interested in normalizing your raw data before performing modelling you should learn the appropriate scaling by looking at only the training data. If you looked at the whole data set for example you would be leaking information about outliers and variation the model should not know about and therefore the model score would not be trustworthy.
+
+## Create class/function or script to do the transformations on raw data
+
+The data pipeline must be applied to the raw data such that the raw data remains unchanged leading into the modelling stage. It should move seamlessly through the transformation pipeline into the modelling pipeline.
+
+Store your functions in `src` and transformed data in `interim` or `processed`.
+
+If desirable you can store this functionality as a script, when run with arguments the required processing is performed and stored in the data folders.  
