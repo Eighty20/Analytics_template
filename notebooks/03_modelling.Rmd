@@ -5,8 +5,35 @@ output: html_notebook
 
 ## Clearly state your objectives and assumptions
 
-## Create baseline model and performance
+We should confirm that the model input does make sense for what we are trying to model, both logically and ethically.
+
+When confirming our objectives we should confirm the ideal outcome. For example if we were doing a classification model on a binary outcome, are we interested in predicting the highest accuracy (yes and no) or do we want high sensitivity or specificity. Are we going to optimize over F1 error or is the chosen loss function appropriate for the current deep learning model.
+
+## Create baseline model/performance
 
 Before starting modelling in earnest it may be helpful to establish a baseline model to better judge signal in the data and measure the effort vs reward tradeoff of using more advanced models.
 
 I recommend using packages like OneR, simple linear model or decision tree
+
+## Measure performance on the baseline model and validate progression to the desired outcome
+
+## Attempt more complicated models if required
+
+## Store model and results on validation data
+
+Store the model and outputs in the `models` folder
+
+When storing the model it is important to consider a few things;
+
+- Is the depencies of the current model a problem?
+
+If your ideal model is a deep learning model for example you should consider how you are storing this model. If the predicting with the model requires the same (potencially GPU) hardware then this could be a big problem - both for reproducibility and for deployment.
+
+- Can the model run on live data in the expected environment?
+
+So you should consider what depencies the model has and also consider what software might be available in the deployment environment. If the environment is a phone for example you may have to store your model as compiled formats (such as compiled pytorch or MOJO H2O models)
+
+- Is the current data the model is trained on identical to the data it will recieve live?
+
+Make sure that the model results check out if you move the data through your data pipeline and into your model straight from it's raw format
+
