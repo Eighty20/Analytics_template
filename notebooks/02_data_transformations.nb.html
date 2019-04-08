@@ -1478,7 +1478,7 @@ window.initializeCodeFolding = function(show) {
   var currentIndex = 1;
 
   // select all R code blocks
-  var rCodeBlocks = $('pre.r, pre.python, pre.bash, pre.sql, pre.cpp, pre.stan, pre.julia');
+  var rCodeBlocks = $('pre.r, pre.python, pre.bash, pre.sql, pre.cpp, pre.stan');
   rCodeBlocks.each(function() {
 
     // create a collapsable div to wrap the code in
@@ -1599,7 +1599,9 @@ h6 {
 </style>
 
 
+</head>
 
+<body>
 
 <style type="text/css">
 .main-container {
@@ -1654,6 +1656,8 @@ summary {
 }
 </style>
 
+
+<div class="container-fluid main-container">
 
 <!-- tabsets -->
 
@@ -1729,20 +1733,11 @@ $(document).ready(function () {
 </style>
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("03_data_transformations.Rmd");
+  window.initializeSourceEmbed("02_data_transformations.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>
 
-
-
-
-</head>
-
-<body>
-
-
-<div class="container-fluid main-container">
 
 
 
@@ -1767,27 +1762,6 @@ $(document).ready(function () {
 
 
 <!-- rnb-text-begin -->
-<div id="dealing-with-nas" class="section level2">
-<h2>Dealing with NA’s</h2>
-</div>
-<div id="data-transformations" class="section level2">
-<h2>Data transformations</h2>
-<p>I recommend using the recipes package in R</p>
-<ul>
-<li>normalizing<br />
-</li>
-<li>one hot encoding<br />
-</li>
-<li>discretizing<br />
-</li>
-<li>creating time series features</li>
-</ul>
-</div>
-<div id="create-classfunction-or-script-to-do-the-transformations-on-raw-data" class="section level2">
-<h2>Create class/function or script to do the transformations on raw data</h2>
-<p>The data pipeline must be applied to the raw data such that the raw data remains unchanged leading into the modelling stage. It should move seamlessly through the transformation pipeline into the modelling pipeline.</p>
-<p>Store your functions in <code>src</code> and transformed data in <code>interim</code> or <code>processed</code></p>
-</div>
 <div id="data-partitions" class="section level2">
 <h2>Data partitions</h2>
 <p>Create your test, train and validation sets. They are stored in <code>processed</code>.</p>
@@ -1799,10 +1773,84 @@ $(document).ready(function () {
 </li>
 <li>Make sure nominal features are properly represented in your data sets and that you have accounted for all possible inputs that can be seen on live scoring</li>
 </ul>
+</div>
+<div id="data-transformations" class="section level2">
+<h2>Data transformations</h2>
+<p>I recommend using the recipes package in R for your data steps:</p>
+<ul>
+<li>normalizing<br />
+</li>
+<li>one hot encoding<br />
+</li>
+<li>discretizing<br />
+</li>
+<li>creating time series features</li>
+</ul>
+<p>Make sure that all learned steps are trained on only your training data. For example if you were interested in normalizing your raw data before performing modelling you should learn the appropriate scaling by looking at only the training data. If you looked at the whole data set for example you would be leaking information about outliers and variation the model should not know about and therefore the model score would not be trustworthy.</p>
+<p>Consider the following potential problems;</p>
+<div id="handling-outliers" class="section level3">
+<h3>Handling outliers</h3>
+<p>Consider the effects of having outliers on the prediction quality and objective of your modelling approach</p>
+<p>Tools:<br />
+- Cook’s distance<br />
+- Twitter anomaly detection<br />
+- H2O autoencoder anomaly detection<br />
+- Simple quintile filters<br />
+- Moving average imputation</p>
+</div>
+<div id="imputations---dealing-with-nas" class="section level3">
+<h3>Imputations - Dealing with NA’s</h3>
+<p>It is common to exclude all NA data, especially when data is plentiful. This is fine as long you track what information is actually lost. Especially if this information is related to certain nominal or ordered features in the data.</p>
+<p>Also consider ways to deal with the NULL/NA data without loosing the row/column information.</p>
+</div>
+<div id="binning" class="section level3">
+<h3>Binning</h3>
+<p>Discretizing or binning can have positive effects on the model</p>
+</div>
+<div id="log-transforms" class="section level3">
+<h3>Log transforms</h3>
+<p>Log transforms are very useful if we have inputs like income or GDP in our training data, because the input is exponential.</p>
+</div>
+<div id="grouping-operations" class="section level3">
+<h3>Grouping operations</h3>
+<p>The grain of the data will determine the output we are interested. For example;</p>
+<p>Say we are recording trips of drivers and predicting if some event has occurred. Using the data as is will make a prediction for each trip, but we may instead be interested in the probability of the event happening to a driver not a trip.</p>
+</div>
+<div id="dates" class="section level3">
+<h3>Dates</h3>
+<p>The information in dates may be very useful</p>
+<p>Consider for example the following;</p>
+<ul>
+<li>The format of the date, string or numeric etc.<br />
+</li>
+<li>Public holidays or seasonality<br />
+</li>
+<li>Sequential events vs independent events</li>
+</ul>
+</div>
+</div>
+<div id="create-classfunction-or-script-to-do-the-transformations-on-raw-data" class="section level2">
+<h2>Create class/function or script to do the transformations on raw data</h2>
+<p>The data pipeline must be applied to the raw data such that the raw data remains unchanged leading into the modelling stage. It should move seamlessly through the transformation pipeline into the modelling pipeline.</p>
+<p>Store your functions in <code>src</code> and transformed data in <code>interim</code> or <code>processed</code>.</p>
+<p>If desirable you can store this functionality as a script, when run with arguments the required processing is performed and stored in the data folders.</p>
+</div>
+<div id="tests" class="section level2">
+<h2>tests</h2>
+<p>Unless we move into production strict unit testing is probably overkill. However, writing basic tests will help ensure that everything is operating as expected and will make building unit testing much easier.</p>
+<p>Consider tests that check that the raw data and that produced by the data pipeline agree where applicable.</p>
+<p>For example;</p>
+<ul>
+<li>Did we filter out rows?<br />
+</li>
+<li>Do we have the same number of classes/dates?<br />
+</li>
+<li>Does our totals match up, if not where?</li>
+</ul>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiMDNfZGF0YV90cmFuc2Zvcm1hdGlvbnMiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCiMjIERlYWxpbmcgd2l0aCBOQSdzCgojIyBEYXRhIHRyYW5zZm9ybWF0aW9ucwoKSSByZWNvbW1lbmQgdXNpbmcgdGhlIHJlY2lwZXMgcGFja2FnZSBpbiBSCgotIG5vcm1hbGl6aW5nICAKLSBvbmUgaG90IGVuY29kaW5nICAKLSBkaXNjcmV0aXppbmcgIAotIGNyZWF0aW5nIHRpbWUgc2VyaWVzIGZlYXR1cmVzICAKCiMjIENyZWF0ZSBjbGFzcy9mdW5jdGlvbiBvciBzY3JpcHQgdG8gZG8gdGhlIHRyYW5zZm9ybWF0aW9ucyBvbiByYXcgZGF0YQoKVGhlIGRhdGEgcGlwZWxpbmUgbXVzdCBiZSBhcHBsaWVkIHRvIHRoZSByYXcgZGF0YSBzdWNoIHRoYXQgdGhlIHJhdyBkYXRhIHJlbWFpbnMgdW5jaGFuZ2VkIGxlYWRpbmcgaW50byB0aGUgbW9kZWxsaW5nIHN0YWdlLiBJdCBzaG91bGQgbW92ZSBzZWFtbGVzc2x5IHRocm91Z2ggdGhlIHRyYW5zZm9ybWF0aW9uIHBpcGVsaW5lIGludG8gdGhlIG1vZGVsbGluZyBwaXBlbGluZS4KClN0b3JlIHlvdXIgZnVuY3Rpb25zIGluIGBzcmNgIGFuZCB0cmFuc2Zvcm1lZCBkYXRhIGluIGBpbnRlcmltYCBvciBgcHJvY2Vzc2VkYAoKIyMgRGF0YSBwYXJ0aXRpb25zCgpDcmVhdGUgeW91ciB0ZXN0LCB0cmFpbiBhbmQgdmFsaWRhdGlvbiBzZXRzLiBUaGV5IGFyZSBzdG9yZWQgaW4gYHByb2Nlc3NlZGAuCgpUaGluZ3MgdG8gbG9vayBvdXQgZm9yOyAgCgotIE5ldmVyIHVzZSB2YWxpZGF0aW9uIGRhdGEgdW50aWwgeW91IHRoaW5rIHlvdSBoYXZlIGRlY2lkZWQgb24gYSBjYW5kaWRhdGUgbW9kZWwgdXNpbmcgdGhlIHRlc3QgZGF0YSAgCi0gTWFrZSBzdXJlIHlvdXIgdmFsaWRhdGlvbiBhbmQgdGVzdCBzZXRzIGFyZSBub3QgbGVha2luZyBpbmZvcm1hdGlvbiBvbiB0aGUgb3V0Y29tZS4gRm9yIGV4YW1wbGUsIHdoZW4gcHJlZGljdGluZyBmdXR1cmUgdmFsdWVzIG5vIGluZm9ybWF0aW9uIHNob3VsZCBiZSBsZWFrZWQgaW4gdGhlIHByZWRpY3RvciB2YXJpYWJsZXMgb3IgdGVzdC92YWxpZGF0aW9uIHNldCAgCi0gTWFrZSBzdXJlIG5vbWluYWwgZmVhdHVyZXMgYXJlIHByb3Blcmx5IHJlcHJlc2VudGVkIGluIHlvdXIgZGF0YSBzZXRzIGFuZCB0aGF0IHlvdSBoYXZlIGFjY291bnRlZCBmb3IgYWxsIHBvc3NpYmxlIGlucHV0cyB0aGF0IGNhbiBiZSBzZWVuIG9uIGxpdmUgc2NvcmluZyAgCgoK</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIjAzX2RhdGFfdHJhbnNmb3JtYXRpb25zIg0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KIyMgRGF0YSBwYXJ0aXRpb25zDQoNCkNyZWF0ZSB5b3VyIHRlc3QsIHRyYWluIGFuZCB2YWxpZGF0aW9uIHNldHMuIFRoZXkgYXJlIHN0b3JlZCBpbiBgcHJvY2Vzc2VkYC4NCg0KVGhpbmdzIHRvIGxvb2sgb3V0IGZvcjsgIA0KDQotIE5ldmVyIHVzZSB2YWxpZGF0aW9uIGRhdGEgdW50aWwgeW91IHRoaW5rIHlvdSBoYXZlIGRlY2lkZWQgb24gYSBjYW5kaWRhdGUgbW9kZWwgdXNpbmcgdGhlIHRlc3QgZGF0YSAgDQotIE1ha2Ugc3VyZSB5b3VyIHZhbGlkYXRpb24gYW5kIHRlc3Qgc2V0cyBhcmUgbm90IGxlYWtpbmcgaW5mb3JtYXRpb24gb24gdGhlIG91dGNvbWUuIEZvciBleGFtcGxlLCB3aGVuIHByZWRpY3RpbmcgZnV0dXJlIHZhbHVlcyBubyBpbmZvcm1hdGlvbiBzaG91bGQgYmUgbGVha2VkIGluIHRoZSBwcmVkaWN0b3IgdmFyaWFibGVzIG9yIHRlc3QvdmFsaWRhdGlvbiBzZXQgIA0KLSBNYWtlIHN1cmUgbm9taW5hbCBmZWF0dXJlcyBhcmUgcHJvcGVybHkgcmVwcmVzZW50ZWQgaW4geW91ciBkYXRhIHNldHMgYW5kIHRoYXQgeW91IGhhdmUgYWNjb3VudGVkIGZvciBhbGwgcG9zc2libGUgaW5wdXRzIHRoYXQgY2FuIGJlIHNlZW4gb24gbGl2ZSBzY29yaW5nICANCg0KIyMgRGF0YSB0cmFuc2Zvcm1hdGlvbnMNCg0KSSByZWNvbW1lbmQgdXNpbmcgdGhlIHJlY2lwZXMgcGFja2FnZSBpbiBSIGZvciB5b3VyIGRhdGEgc3RlcHM6DQoNCi0gbm9ybWFsaXppbmcgIA0KLSBvbmUgaG90IGVuY29kaW5nICANCi0gZGlzY3JldGl6aW5nICANCi0gY3JlYXRpbmcgdGltZSBzZXJpZXMgZmVhdHVyZXMgIA0KDQpNYWtlIHN1cmUgdGhhdCBhbGwgbGVhcm5lZCBzdGVwcyBhcmUgdHJhaW5lZCBvbiBvbmx5IHlvdXIgdHJhaW5pbmcgZGF0YS4gRm9yIGV4YW1wbGUgaWYgeW91IHdlcmUgaW50ZXJlc3RlZCBpbiBub3JtYWxpemluZyB5b3VyIHJhdyBkYXRhIGJlZm9yZSBwZXJmb3JtaW5nIG1vZGVsbGluZyB5b3Ugc2hvdWxkIGxlYXJuIHRoZSBhcHByb3ByaWF0ZSBzY2FsaW5nIGJ5IGxvb2tpbmcgYXQgb25seSB0aGUgdHJhaW5pbmcgZGF0YS4gSWYgeW91IGxvb2tlZCBhdCB0aGUgd2hvbGUgZGF0YSBzZXQgZm9yIGV4YW1wbGUgeW91IHdvdWxkIGJlIGxlYWtpbmcgaW5mb3JtYXRpb24gYWJvdXQgb3V0bGllcnMgYW5kIHZhcmlhdGlvbiB0aGUgbW9kZWwgc2hvdWxkIG5vdCBrbm93IGFib3V0IGFuZCB0aGVyZWZvcmUgdGhlIG1vZGVsIHNjb3JlIHdvdWxkIG5vdCBiZSB0cnVzdHdvcnRoeS4NCg0KQ29uc2lkZXIgdGhlIGZvbGxvd2luZyBwb3RlbnRpYWwgcHJvYmxlbXM7ICANCg0KIyMjIEhhbmRsaW5nIG91dGxpZXJzDQoNCkNvbnNpZGVyIHRoZSBlZmZlY3RzIG9mIGhhdmluZyBvdXRsaWVycyBvbiB0aGUgcHJlZGljdGlvbiBxdWFsaXR5IGFuZCBvYmplY3RpdmUgb2YgeW91ciBtb2RlbGxpbmcgYXBwcm9hY2gNCg0KVG9vbHM6ICANCi0gQ29vaydzIGRpc3RhbmNlICANCi0gVHdpdHRlciBhbm9tYWx5IGRldGVjdGlvbiAgDQotIEgyTyBhdXRvZW5jb2RlciBhbm9tYWx5IGRldGVjdGlvbiAgDQotIFNpbXBsZSBxdWludGlsZSBmaWx0ZXJzICANCi0gTW92aW5nIGF2ZXJhZ2UgaW1wdXRhdGlvbg0KDQojIyMgSW1wdXRhdGlvbnMgLSBEZWFsaW5nIHdpdGggTkEncw0KDQpJdCBpcyBjb21tb24gdG8gZXhjbHVkZSBhbGwgTkEgZGF0YSwgZXNwZWNpYWxseSB3aGVuIGRhdGEgaXMgcGxlbnRpZnVsLiBUaGlzIGlzIGZpbmUgYXMgbG9uZyB5b3UgdHJhY2sgd2hhdCBpbmZvcm1hdGlvbiBpcyBhY3R1YWxseSBsb3N0LiBFc3BlY2lhbGx5IGlmIHRoaXMgaW5mb3JtYXRpb24gaXMgcmVsYXRlZCB0byBjZXJ0YWluIG5vbWluYWwgb3Igb3JkZXJlZCBmZWF0dXJlcyBpbiB0aGUgZGF0YS4NCg0KQWxzbyBjb25zaWRlciB3YXlzIHRvIGRlYWwgd2l0aCB0aGUgTlVMTC9OQSBkYXRhIHdpdGhvdXQgbG9vc2luZyB0aGUgcm93L2NvbHVtbiBpbmZvcm1hdGlvbi4NCg0KIyMjIEJpbm5pbmcNCg0KRGlzY3JldGl6aW5nIG9yIGJpbm5pbmcgY2FuIGhhdmUgcG9zaXRpdmUgZWZmZWN0cyBvbiB0aGUgbW9kZWwNCg0KIyMjIExvZyB0cmFuc2Zvcm1zDQoNCkxvZyB0cmFuc2Zvcm1zIGFyZSB2ZXJ5IHVzZWZ1bCBpZiB3ZSBoYXZlIGlucHV0cyBsaWtlIGluY29tZSBvciBHRFAgaW4gb3VyIHRyYWluaW5nIGRhdGEsIGJlY2F1c2UgdGhlIGlucHV0IGlzIGV4cG9uZW50aWFsLg0KDQojIyMgR3JvdXBpbmcgb3BlcmF0aW9ucw0KDQpUaGUgZ3JhaW4gb2YgdGhlIGRhdGEgd2lsbCBkZXRlcm1pbmUgdGhlIG91dHB1dCB3ZSBhcmUgaW50ZXJlc3RlZC4gRm9yIGV4YW1wbGU7DQoNClNheSB3ZSBhcmUgcmVjb3JkaW5nIHRyaXBzIG9mIGRyaXZlcnMgYW5kIHByZWRpY3RpbmcgaWYgc29tZSBldmVudCBoYXMgb2NjdXJyZWQuIFVzaW5nIHRoZSBkYXRhIGFzIGlzIHdpbGwgbWFrZSBhIHByZWRpY3Rpb24gZm9yIGVhY2ggdHJpcCwgYnV0IHdlIG1heSBpbnN0ZWFkIGJlIGludGVyZXN0ZWQgaW4gdGhlIHByb2JhYmlsaXR5IG9mIHRoZSBldmVudCBoYXBwZW5pbmcgdG8gYSBkcml2ZXIgbm90IGEgdHJpcC4NCg0KIyMjIERhdGVzDQoNClRoZSBpbmZvcm1hdGlvbiBpbiBkYXRlcyBtYXkgYmUgdmVyeSB1c2VmdWwNCg0KQ29uc2lkZXIgZm9yIGV4YW1wbGUgdGhlIGZvbGxvd2luZzsNCg0KLSBUaGUgZm9ybWF0IG9mIHRoZSBkYXRlLCBzdHJpbmcgb3IgbnVtZXJpYyBldGMuICANCi0gUHVibGljIGhvbGlkYXlzIG9yIHNlYXNvbmFsaXR5ICANCi0gU2VxdWVudGlhbCBldmVudHMgdnMgaW5kZXBlbmRlbnQgZXZlbnRzIA0KDQojIyBDcmVhdGUgY2xhc3MvZnVuY3Rpb24gb3Igc2NyaXB0IHRvIGRvIHRoZSB0cmFuc2Zvcm1hdGlvbnMgb24gcmF3IGRhdGENCg0KVGhlIGRhdGEgcGlwZWxpbmUgbXVzdCBiZSBhcHBsaWVkIHRvIHRoZSByYXcgZGF0YSBzdWNoIHRoYXQgdGhlIHJhdyBkYXRhIHJlbWFpbnMgdW5jaGFuZ2VkIGxlYWRpbmcgaW50byB0aGUgbW9kZWxsaW5nIHN0YWdlLiBJdCBzaG91bGQgbW92ZSBzZWFtbGVzc2x5IHRocm91Z2ggdGhlIHRyYW5zZm9ybWF0aW9uIHBpcGVsaW5lIGludG8gdGhlIG1vZGVsbGluZyBwaXBlbGluZS4NCg0KU3RvcmUgeW91ciBmdW5jdGlvbnMgaW4gYHNyY2AgYW5kIHRyYW5zZm9ybWVkIGRhdGEgaW4gYGludGVyaW1gIG9yIGBwcm9jZXNzZWRgLg0KDQpJZiBkZXNpcmFibGUgeW91IGNhbiBzdG9yZSB0aGlzIGZ1bmN0aW9uYWxpdHkgYXMgYSBzY3JpcHQsIHdoZW4gcnVuIHdpdGggYXJndW1lbnRzIHRoZSByZXF1aXJlZCBwcm9jZXNzaW5nIGlzIHBlcmZvcm1lZCBhbmQgc3RvcmVkIGluIHRoZSBkYXRhIGZvbGRlcnMuICANCg0KIyMgdGVzdHMNCg0KVW5sZXNzIHdlIG1vdmUgaW50byBwcm9kdWN0aW9uIHN0cmljdCB1bml0IHRlc3RpbmcgaXMgcHJvYmFibHkgb3ZlcmtpbGwuIEhvd2V2ZXIsIHdyaXRpbmcgYmFzaWMgdGVzdHMgd2lsbCBoZWxwIGVuc3VyZSB0aGF0IGV2ZXJ5dGhpbmcgaXMgb3BlcmF0aW5nIGFzIGV4cGVjdGVkIGFuZCB3aWxsIG1ha2UgYnVpbGRpbmcgdW5pdCB0ZXN0aW5nIG11Y2ggZWFzaWVyLg0KDQpDb25zaWRlciB0ZXN0cyB0aGF0IGNoZWNrIHRoYXQgdGhlIHJhdyBkYXRhIGFuZCB0aGF0IHByb2R1Y2VkIGJ5IHRoZSBkYXRhIHBpcGVsaW5lIGFncmVlIHdoZXJlIGFwcGxpY2FibGUuDQoNCkZvciBleGFtcGxlOyAgDQoNCi0gRGlkIHdlIGZpbHRlciBvdXQgcm93cz8gIA0KLSBEbyB3ZSBoYXZlIHRoZSBzYW1lIG51bWJlciBvZiBjbGFzc2VzL2RhdGVzPyAgDQotIERvZXMgb3VyIHRvdGFscyBtYXRjaCB1cCwgaWYgbm90IHdoZXJlPyAgDQoNCg==</div>
 
 
 

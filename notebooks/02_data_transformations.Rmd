@@ -13,12 +13,6 @@ Things to look out for;
 - Make sure your validation and test sets are not leaking information on the outcome. For example, when predicting future values no information should be leaked in the predictor variables or test/validation set  
 - Make sure nominal features are properly represented in your data sets and that you have accounted for all possible inputs that can be seen on live scoring  
 
-## Dealing with NA's
-
-It is common to exclude all NA data, especially when data is plentiful. This is fine as long you track what information is actually lost. Especially if this information is related to certain nominal or ordered features in the data.
-
-Also consider ways to deal with the NULL/NA data without loosing the row/column information.
-
 ## Data transformations
 
 I recommend using the recipes package in R for your data steps:
@@ -29,6 +23,49 @@ I recommend using the recipes package in R for your data steps:
 - creating time series features  
 
 Make sure that all learned steps are trained on only your training data. For example if you were interested in normalizing your raw data before performing modelling you should learn the appropriate scaling by looking at only the training data. If you looked at the whole data set for example you would be leaking information about outliers and variation the model should not know about and therefore the model score would not be trustworthy.
+
+Consider the following potential problems;  
+
+### Handling outliers
+
+Consider the effects of having outliers on the prediction quality and objective of your modelling approach
+
+Tools:  
+- Cook's distance  
+- Twitter anomaly detection  
+- H2O autoencoder anomaly detection  
+- Simple quintile filters  
+- Moving average imputation
+
+### Imputations - Dealing with NA's
+
+It is common to exclude all NA data, especially when data is plentiful. This is fine as long you track what information is actually lost. Especially if this information is related to certain nominal or ordered features in the data.
+
+Also consider ways to deal with the NULL/NA data without loosing the row/column information.
+
+### Binning
+
+Discretizing or binning can have positive effects on the model
+
+### Log transforms
+
+Log transforms are very useful if we have inputs like income or GDP in our training data, because the input is exponential.
+
+### Grouping operations
+
+The grain of the data will determine the output we are interested. For example;
+
+Say we are recording trips of drivers and predicting if some event has occurred. Using the data as is will make a prediction for each trip, but we may instead be interested in the probability of the event happening to a driver not a trip.
+
+### Dates
+
+The information in dates may be very useful
+
+Consider for example the following;
+
+- The format of the date, string or numeric etc.  
+- Public holidays or seasonality  
+- Sequential events vs independent events 
 
 ## Create class/function or script to do the transformations on raw data
 
